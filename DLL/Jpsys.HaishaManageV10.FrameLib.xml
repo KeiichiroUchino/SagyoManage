@@ -1,0 +1,3918 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Jpsys.HaishaManageV10.FrameLib</name>
+    </assembly>
+    <members>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.FrameEditMode">
+            <summary>
+            編集可能画面の現在の画面状態を表す列挙体です。
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.FrameEditMode.Default">
+            <summary>
+            デフォルト（初期状態）をあらわします。
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.FrameEditMode.New">
+            <summary>
+            新規入力可能状態を表します。
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.FrameEditMode.Editable">
+            <summary>
+            既存データ読み込み後の編集可能状態を表します。
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.FrameEditMode.ViewOnly">
+            <summary>
+            既存データ読み込み後に参照のみが可能の状態を表します。
+            </summary>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.FrameEditModeEx">
+            <summary>
+            編集可能画面の現在の画面状態を表す列挙体です。
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.FrameEditModeEx.Default">
+            <summary>
+            デフォルト（初期状態）をあらわします。
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.FrameEditModeEx.New">
+            <summary>
+            新規入力可能状態を表します。
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.FrameEditModeEx.New2">
+            <summary>
+            新規入力可能状態を表します。
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.FrameEditModeEx.Editable">
+            <summary>
+            既存データ読み込み後の編集可能状態を表します。
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.FrameEditModeEx.Editable2">
+            <summary>
+            既存データ読み込み後の編集可能状態を表します。
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.FrameEditModeEx.Editable3">
+            <summary>
+            既存データ読み込み後の編集可能状態を表します。
+            </summary>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.ReportPrintDestType">
+            <summary>
+            帳票印刷指示での印刷先を表す列挙体です。
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.ReportPrintDestType.PrintToPrinter">
+            <summary>
+            （直接）印刷
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.ReportPrintDestType.PrintToScreen">
+            <summary>
+            プレビュー
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.ReportPrintDestType.PrintToFax">
+            <summary>
+            FAX
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.ReportPrintDestType.ExportExcel">
+            <summary>
+            エクセル出力
+            </summary>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.SpecialStringContaintType">
+            <summary>
+            一致方法を選択可能な文字列一致判定メソッドにおいて、その
+            一致とみなす方法を表す列挙体です。
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.SpecialStringContaintType.StartsWith">
+            <summary>
+            前方一致
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.SpecialStringContaintType.Contains">
+            <summary>
+            包含一致（いわゆるあいまい検索）
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.SpecialStringContaintType.EndsWith">
+            <summary>
+            後方一致
+            </summary>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.DataSpecifyMode">
+            <summary>
+            データの指定モード
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.DataSpecifyMode.All">
+            <summary>
+            すべて
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.DataSpecifyMode.Range">
+            <summary>
+            範囲
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.DataSpecifyMode.Separated">
+            <summary>
+            個別指定
+            </summary>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.FrameShowMode">
+            <summary>
+            画面の表示モードを表す列挙体です。
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.FrameShowMode.ListView">
+            <summary>
+            一覧表示
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.FrameShowMode.Search">
+            <summary>
+            検索
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.FrameShowMode.SubSearch">
+            <summary>
+            サブ検索
+            </summary>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.ProcessMode">
+            <summary>
+            処理モード
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.ProcessMode.Shinki">
+            <summary>
+            新規
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.ProcessMode.Syuusei">
+            <summary>
+            修正
+            </summary>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.FrameLogWriter">
+            <summary>
+            画面操作のログを出力するためのログ出力クラスです。
+            </summary>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.FrameLogWriter.LoggingOperateKind">
+            <summary>
+            ロギング時の操作種類を表す列挙体です。
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.FrameLogWriter.LoggingOperateKind.ShownFrame">
+            <summary>
+            画面の起動
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.FrameLogWriter.LoggingOperateKind.CloseFrame">
+            <summary>
+            画面の終了
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.FrameLogWriter.LoggingOperateKind.NewItem">
+            <summary>
+            データの登録（新規作成）
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.FrameLogWriter.LoggingOperateKind.UpdateItem">
+            <summary>
+            データの修正
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.FrameLogWriter.LoggingOperateKind.DelItem">
+            <summary>
+            データの削除
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.FrameLogWriter.LoggingOperateKind.PrintPrinting">
+            <summary>
+            印刷
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.FrameLogWriter.LoggingOperateKind.PrintPreview">
+            <summary>
+            プレビュー
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.FrameLogWriter.LoggingOperateKind.ProcessTask">
+            <summary>
+            処理の実行（計算や集計などの一括処理）
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.FrameLogWriter.LoggingOperateKind.ChangeCode">
+            <summary>
+            コード変更
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.FrameLogWriter.LoggingOperateKind.PrintFax">
+            <summary>
+            FAX
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.FrameLogWriter.LoggingOperateKind.FileOutPut">
+            <summary>
+            ＣＳＶ出力
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.FrameLogWriter._authInfo">
+            <summary>
+            認証情報の保持領域
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameLogWriter.#ctor">
+            <summary>
+            コンストラクタのプライベート化
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameLogWriter.GetLogger(Jpsys.HaishaManageV10.Model.AppAuthInfo)">
+            <summary>
+            認証情報を指定して、ログ出力クラスをインスタンス化して取得します。
+            </summary>
+            <param name="authInfo">認証情報</param>
+            <returns>ログ出力クラスのインスタンス</returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameLogWriter.LoggingLog(Jpsys.HaishaManageV10.FrameLib.FrameLogWriter.LoggingOperateKind)">
+            <summary>
+            操作種類を指定して、ログ出力を行います。
+            </summary>
+            <param name="kind">操作種類をあらわす列挙体の値</param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameLogWriter.LoggingLog(Jpsys.HaishaManageV10.FrameLib.FrameLogWriter.LoggingOperateKind,System.String)">
+            <summary>
+            操作種類と操作条件文字列を指定して、ログ出力を行います。
+            </summary>
+            <param name="kind">操作種類を表す列挙体の値</param>
+            <param name="jyoken">操作条件文字列</param>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.FrameLogWriter.myInstance">
+            <summary>
+            本クラスのインスタンスを静的に保持します。
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameLogWriter.CreateInstance">
+            <summary>
+            本クラスのインスタンスを作成します。
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameLogWriter.GetOperateKindString(Jpsys.HaishaManageV10.FrameLib.FrameLogWriter.LoggingOperateKind)">
+            <summary>
+            ロギング時の操作種類を表す列挙体を指定して、
+            対応する文字列表記を取得します。
+            </summary>
+            <param name="kind">ロギング時の操作種類を表す列挙体。</param>
+            <returns>対応する文字列表記</returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameLogWriter.WrittingLog(System.Object)">
+            <summary>
+            ログ出力要素を表すインスタンスを指定して、ログ出力処理を
+            開始します。
+            </summary>
+            <param name="state"></param>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.FrameLogWriter.LoggingProcessItemModel">
+            <summary>
+            ログ出力を実行するスレッドプールで実行するメソッドに渡す値を保持するための
+            クラスです。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.FrameLogWriter.LoggingProcessItemModel.LogSrcAuthInfo">
+            <summary>
+            ログ出力要素とするアプリケーション認証情報を取得・設定します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.FrameLogWriter.LoggingProcessItemModel.OperateKindString">
+            <summary>
+            操作種別を表す文字列を取得・設定します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.FrameLogWriter.LoggingProcessItemModel.RemarkText">
+            <summary>
+            ログ出力適用項目を取得・設定します。
+            </summary>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.FrameUtilites">
+            <summary>
+            画面を定義するクラスまたはその操作を定義するクラスにて共通に使用する、
+            各種静的メソッドを定義します。いわゆるシステム共通関数です。
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.debugLogger">
+            <summary>
+            デバッグログを出力するロガーのインスタンスを保持
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.HMS_DEFAULT_VALUE">
+            <summary>
+            時間初期値
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.COL_MAXROW_TANKLIST">
+            <summary>
+            配給一覧最大表示行数
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.GetSystemName(Jpsys.HaishaManageV10.BizProperty.DefaultProperty.SystemNameKbn,System.Int32)">
+            <summary>
+            システム名称マスタの名称区分とコードを指定して、
+            システム名称を取得します。
+            </summary>
+            <param name="kbn">システム名称区分</param>
+            <param name="code">システム名称コード</param>
+            <returns>システム名称</returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.GetSystemNameKbnString(Jpsys.HaishaManageV10.BizProperty.DefaultProperty.SystemNameKbn)">
+            <summary>
+            システム名称を表す列挙体を表す列挙体を指定して、システム名称の区分(種類)名を取得します。
+            </summary>
+            <param name="kbn">システム名称を表す列挙体</param>
+            <returns>システム名称名</returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.GetDataSpecifyModeNameString(Jpsys.HaishaManageV10.FrameLib.DataSpecifyMode)">
+            <summary>
+            画面の表示モードを表す列挙体を指定して、表示モード名を取得します。
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.SetProcessModeStatusLabel(System.Windows.Forms.ToolStripStatusLabel,Jpsys.HaishaManageV10.FrameLib.ProcessMode)">
+            <summary>
+            処理モードに応じて、ToolStripStatusLabelのTextを変更します
+            </summary>
+            <param name="label">ToolStripStatusLabelコントロール</param>
+            <param name="processMode">処理モード</param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.GetDefineMessage(System.String)">
+            <summary>
+            フォーム用共通メッセージテーブルのキー文字列を指定して、共通メッセージ
+            を取得します。
+            </summary>
+            <param name="key">取得したいメッセージのキー文字列</param>
+            <returns>共通メッセージ</returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.GetDefineMessage(System.String,System.String[])">
+            <summary>
+            フォーム用共通メッセージテーブルのキー文字列及び書式指定文字列に埋め込む
+            文字列の配列を指定して、共通メッセージを取得します。
+            </summary>
+            <param name="key">取得したいメッセージのキー文字列</param>
+            <param name="strArr">メッセージに埋め込む文字列の配列</param>
+            <returns>メッセージを埋め込まれた共通メッセージ</returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.GetDefineLogMessage(System.String,System.String[])">
+            <summary>
+            ログ出力用共通メッセージテーブルのキー文字列および書式指定文字列に
+            埋め込む文字列の配列を指定して、ログ出力用共通メッセージを
+            取得します。
+            </summary>
+            <param name="key">取得したいログメッセージのキー文字列</param>
+            <param name="strArr">メッセージに埋め込む文字列の配列</param>
+            <returns>メッセージを埋め込まれたログ出力用共通メッセージ</returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.GetEditingControlValue(System.Windows.Forms.Control)">
+            <summary>
+            MultiRowの編集コントロールからCell.Valueに相当するものを取得します。
+            </summary>
+            <param name="editingControl">MultiRowの編集コントロール（IEditingControlを実装するオブジェクト）</param>
+            <returns>Cell.Valueに相当する値</returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.SetEditingControlValue(System.Windows.Forms.Control,System.Object)">
+            <summary>
+            MultiRowの編集コントロールのCell.Valueに相当するものに値を設定します。
+            </summary>
+            <param name="editingControl">MultiRowの編集コントロール（IEditingControlを実装するオブジェクト）</param>
+            <param name="value">値</param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.CsvToList(System.String)">
+            <summary>
+            CSVをStringのリストを格納するリストに変換
+            </summary>
+            <param name="csvText">CSVの内容が入ったString</param>
+            <returns>変換結果のStringのリストを格納するリスト</returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.ApplicationLogWriter(jp.co.jpsys.util.log.NSKLogPriority,System.String,System.String)">
+            <summary>
+            ログに出力するタイトルと、内容を指定してアプリケーション動作ログを出力します。
+            ログは非ローミングユーザのApplication Dataフォルダに出力されます。
+            </summary>
+            <param name="priority">ログレベル（ログの重要度）</param>
+            <param name="title">ログのタイトル</param>
+            <param name="description">ログの内容</param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.DebugLogWriter(System.String,System.String)">
+            <summary>
+            デバッグログに出力するタイトルと、内容を指定してデバッグログを出力します。
+            デバッグログは非ローミングユーザのApplication Dataフォルダに出力されます。
+            </summary>
+            <param name="title">デバッグログのタイトル</param>
+            <param name="description">デバッグログの内容</param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.DelPrintSetting(System.String)">
+            <summary>
+            印刷画面名を指定して、その印刷設定を削除します。
+            </summary>
+            <param name="printToFrameName">印刷画面名</param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.SubstringShiftJIS(System.String,System.Int32,System.Int32)">
+            <summary>
+            対象の文字列をShiftJISで取扱い、バイト単位で文字列の一部を
+            取得します。開始位置及び取得する文字数はバイト数にて指定します。
+            </summary>
+            <param name="val">扱う対象の文字列</param>
+            <param name="start">開始位置（1からです）</param>
+            <param name="length">取得するバイト数</param>
+            <returns>
+            対象の文字列をShiftJISにて取扱い、指定された開始位置（バイト数）から
+            指定したバイト数分文字列を取得します。その際最後の文字列が２バイト文字
+            だった場合は切り捨てます。
+            </returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.CreateCSVDataByStringArrList(System.Collections.Generic.List{System.String[]},System.String)">
+            <summary> 
+            文字列の配列を型とするジェネリックのList型の値とファイルの保存先を指定して、 
+            CSVファイルを出力します。 
+            １件目をヘッダとはみなしません。 
+            </summary> 
+            <param name="stringArrayList">出力したい値の入ったリスト</param> 
+            <param name="filePath">ファイルの保存先</param> 
+            <remarks></remarks> 
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.CreateCSVDataByStringArrListEx(System.Collections.Generic.List{System.String[]},System.String,System.Boolean)">
+            <summary> 
+            文字列の配列を型とするジェネリックのList型の値とファイルの保存先を指定して、 
+            CSVファイルを出力します。 
+            １件目をヘッダとはみなしません。 
+            </summary> 
+            <param name="stringArrayList">出力したい値の入ったリスト</param> 
+            <param name="filePath">ファイルの保存先</param> 
+            <param name="QuoteFlag">ダブルクォート必須フラグ（true：囲む、false：囲まない）</param> 
+            <remarks></remarks> 
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.SpecialContaintString(System.String,System.String,Jpsys.HaishaManageV10.FrameLib.SpecialStringContaintType)">
+            <summary>
+            一致の方法を選択して、文字列に任意の文字列が含まれているかどうか
+            を判断します。
+            </summary>
+            <param name="srcValue">比較対象の文字列</param>
+            <param name="containtString">比較する文字列</param>
+            <param name="type">一致方法</param>
+            <returns>判断結果（true:一致する）</returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.ConvertTimeSpanToDateTime(System.TimeSpan)">
+            <summary>
+            TimeSpan型の値をDateTime型に変換して返します。日付にはシステム日付を使用します。
+            （指定したTimeSpan値がMinValueの場合、戻り値はDateTime.MinValueを返します。）
+            </summary>
+            <param name="ts">DateTime型に変換したいTimeSpan値</param>
+            <returns>DateTime値</returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.ConvertDateTimeToTimeSpan(System.DateTime)">
+            <summary>
+            DateTime型の時分秒(hhmmss)値をTimeSpan型に変換して返します。年月日(yyyyMMdd)は値に影響を及ぼしません。
+            （指定したDateTime値がMinValueの場合、戻り値はTimeSpan.MinValueを返します。）
+            </summary>
+            <param name="dt">TimeSpan型に変換したいDateTime値</param>
+            <returns>TimeSpan値</returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.SetImeSentenceModeForInputMan(GrapeCity.Win.Editors.GcTextBox)">
+            <summary>
+            Imeの変換モードを設定します。
+            </summary>
+            <param name="control"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.SetupGcComboBox(GrapeCity.Win.Editors.GcComboBox,System.Collections.IDictionary)">
+            <summary>
+            GcComboBoxをセットアップします。
+            指定したIDictionary型のデータソースはGcCombBoxのデータソースに設定されます。
+            要素のKeyはコンボのValueに、ValueはTextに設定されます。
+            </summary>
+            <param name="comboBox"></param>
+            <param name="datasource"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.SetupGcComboBoxCell(GrapeCity.Win.MultiRow.InputMan.GcComboBoxCell,System.Collections.IDictionary,System.Boolean,System.String)">
+            <summary>
+            GcComboBoxCellをセットアップします。
+            指定したIDictionary型のデータソースはGcCombBoxCellのデータソースに設定されます。
+            要素のKeyはコンボのValueに、ValueはTextに設定されます。
+            </summary>
+            <param name="comboBoxCell"></param>
+            <param name="datasource"></param>
+            <param name="addEmptyItemToFirst">空のItemを追加するかどうか</param>
+            <param name="emptyItemTextToFirst">空のItemの名称</param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.SetupGcComboBoxCellEx(GrapeCity.Win.MultiRow.InputMan.GcComboBoxCell,System.Collections.IDictionary,System.Boolean,System.String)">
+            <summary>
+            GcComboBoxCellをセットアップします。
+            指定したIDictionary型のデータソースはGcCombBoxCellのデータソースに設定されます。
+            要素のKeyはコンボのValueに、ValueはTextに設定されます。
+            </summary>
+            <param name="comboBoxCell"></param>
+            <param name="datasource"></param>
+            <param name="addEmptyItemToFirst">空のItemを追加するかどうか</param>
+            <param name="emptyItemTextToFirst">空のItemの名称</param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.SetupGcComboBoxForValueText(GrapeCity.Win.Editors.GcComboBox,System.Collections.IDictionary,System.Boolean,System.String,System.Boolean)">
+            <summary>
+            GcComboBoxをセットアップします。
+            指定したIDictionary型のデータソースはGcCombBoxのデータソースに設定されます。
+            要素のKeyはコンボのValueに、ValueはTextに設定されます。
+            </summary>
+            <param name="comboBox">コンボボックス</param>
+            <param name="datasource">データソース</param>
+            <param name="addEmptyItemToFirst">空のItemを追加するかどうか</param>
+            <param name="emptyItemTextToFirst">空のItemの名称</param>
+            <param name="addPrefixKey">コンボアイテムのプレフィックスにキーとつけるかどうか</param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.SetGcComboBoxDataSource(GrapeCity.Win.Editors.GcComboBox,System.Collections.IDictionary,System.Boolean,System.String,System.Boolean)">
+            <summary>
+            指定したComboBoxにDictinary形式のデータソースを設定します。
+            DictionaryのKeyはコンボのValueに、ValueはTextに設定されます。
+            </summary>
+            <param name="comboBox">コンボボックス</param>
+            <param name="datasource">データソース</param>
+            <param name="addEmptyItemToFirst">空のアイテムを追加するかどうか</param>
+            <param name="emptyItemTextToFirst">空のItemの名称</param>
+            <param name="addPrefixKey">コンボアイテムのプレフィックスにキーとつけるかどうか</param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.ShowExceptionMessage(System.Exception,System.Windows.Forms.Form)">
+            <summary>
+            画面の終了を要求される例外のインスタンスを受け取ったときのメッセージを表示します。
+            </summary>
+            <param name="ex"></param>
+            <param name="f"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.ShowExceptionMessage(Jpsys.HaishaManageV10.Model.DALExceptions.CanRetryException,System.Windows.Forms.Form)">
+            <summary>
+            リトライ可能例外のインスタンスを受けったときのメッセージを表示します。
+            </summary>
+            <param name="ex"></param>
+            <param name="f"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.ShowExceptionMessage(Jpsys.HaishaManageV10.Model.DALExceptions.UniqueConstraintException,System.Windows.Forms.Form)">
+            <summary>
+            リトライ可能例外のインスタンスを受けったときのメッセージを表示します。
+            </summary>
+            <param name="ex"></param>
+            <param name="f"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.ShowExceptionMessage(Jpsys.HaishaManageV10.Model.DALExceptions.MustCloseFormException,System.Windows.Forms.Form)">
+            <summary>
+            画面の終了を要求される例外のインスタンスを受け取ったときのメッセージを表示します。
+            </summary>
+            <param name="ex"></param>
+            <param name="f"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.ShowExceptionMessage(Jpsys.HaishaManageV10.Model.DALExceptions.CanRetryException,System.Windows.Forms.UserControl)">
+            <summary>
+            リトライ可能例外のインスタンスを受けったときのメッセージを表示します。
+            </summary>
+            <param name="ex"></param>
+            <param name="f"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.ShowExceptionMessage(Jpsys.HaishaManageV10.Model.DALExceptions.MustCloseFormException,System.Windows.Forms.UserControl)">
+            <summary>
+            画面の終了を要求される例外のインスタンスを受け取ったときのメッセージを表示します。
+            </summary>
+            <param name="ex"></param>
+            <param name="f"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.StructToNullIfValueIsDefault``1(``0)">
+            <summary>
+            指定した値型がデフォルト値（たとえば、DateTime：MinValue, Int32：0など...）の場合はnullに変換する
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="val"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.StringToNullIfValueIsNullOrWhiteSpace(System.String)">
+            <summary>
+            stringがIsNullOrWhiteSpaceメソッドでtrueを返す場合は、nullにして返す
+            </summary>
+            <param name="val"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.GetGcTimeValue(System.Nullable{System.TimeSpan})">
+            <summary>
+            GcTime.Valueの値をTimeSpan型にして返却します。
+            秒は0を入れて返却する
+            </summary>
+            <param name="val">GcTime.Value</param>
+            <returns>TimeSpan型に変換された値</returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.SetGcTimeValue(System.TimeSpan)">
+            <summary>
+            GcTime.Valueにセットする値を作成する
+            </summary>
+            <param name="val">GcTime.Value</param>
+            <returns>TimeSpan型に変換された値</returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.ChangeBackColorMrow(GrapeCity.Win.MultiRow.GcMultiRow,System.Int32,System.Drawing.Color)">
+             <summary>
+            明細(マルチロウ)の指定した行数目を引数の背景色を変更する
+            指定した行数が-1だった場合はすべての行の背景色を変更する
+             </summary>
+             <param name="mrow">明細(マルチロウ)</param>
+             <param name="rowIndex">○行目(-1の場合は全行を対象とする)</param>
+             <param name="color">変更させる色</param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.ChangeForeColorMrow(GrapeCity.Win.MultiRow.GcMultiRow,System.Int32,System.Drawing.Color)">
+             <summary>
+            明細(マルチロウ)の指定した行数目を引数の文字色を変更する
+            指定した行数が-1だった場合はすべての行の文字色を変更する
+             </summary>
+             <param name="mrow">明細(マルチロウ)</param>
+             <param name="rowIndex">○行目(-1の場合は全行を対象とする)</param>
+             <param name="color">変更させる色</param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.CalcKaikeiNendo(System.DateTime)">
+            <summary>
+            会計年度を計算します。
+            戻り値は西暦の下2桁で返します。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.SelectFilePath(System.String,System.Windows.Forms.DialogResult@)">
+            <summary>
+            ファイル名を指定して、保存先を選択して、保存先、ダイアログの結果を返します。
+            </summary>
+            <param name="fileName">ファイル名</param>
+            <param name="dialogResult">ダイアログボックスの戻り値</param>
+            <returns></returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.GetExportFilePath(System.String,System.String)">
+            <summary>
+            現在稼働中のユーザ毎にレジストリに保存されているファイル出力に
+            使用するパスを取得します。
+            見つからなかった場合はドキュメントフォルダのパスを返します。
+            </summary>
+            <param name="frameName">画面名（レジストリのキー）</param>
+            <param name="reportfolderpath">帳票フォルダパス</param>
+            <returns>ファイル出力先のパス</returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.SetExportFilePath(System.String,System.String)">
+            <summary>
+            ファイル出力に使用するパスをレジストリへ保存します。
+            </summary>
+            <param name="path">保存する出力先パス</param>
+            <param name="frameName">画面名（レジストリのキー）</param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.SelectNextControlByKeyDown(System.Object,System.Windows.Forms.KeyEventArgs,System.Object)">
+            <summary>
+            チェックボックス等をEnterキーでタブ遷移します。
+            </summary>
+            <param name="sender">チェックボックス等</param>
+            <param name="e">キーイベント</param>
+            <param name="form">フォーム</param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.HmsEnter(System.Object,System.EventArgs)">
+            <summary>
+            時刻テキストボックスのEnterイベントの制御を行います。
+            </summary>
+            <param name="sender">テキストボックス</param>
+            <param name="e">キーイベント</param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.HmsLeave(System.Object,System.EventArgs)">
+            <summary>
+            時刻テキストボックスのLeaveイベントの制御を行います。
+            </summary>
+            <param name="sender">テキストボックス</param>
+            <param name="e">キーイベント</param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.SetFrameGridBackColor(System.Windows.Forms.Control)">
+            <summary>
+            表背景色を設定します。
+            </summary>
+            <returns>タイトル背景色</returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.GetKyujitsuKbnBackColor(Jpsys.HaishaManageV10.BizProperty.DefaultProperty.KyujitsuKbn)">
+            <summary>
+            休日区分の背景色を取得します。
+            </summary>
+            <returns>休日区分の背景色</returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.GetKyujitsuKbnForeColor(Jpsys.HaishaManageV10.BizProperty.DefaultProperty.KyujitsuKbn)">
+            <summary>
+            休日区分の文字色を取得します。
+            </summary>
+            <returns>休日区分の文字色</returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.SetDataGridViewColor(System.Windows.Forms.DataGridView)">
+            <summary>
+            DataGridViewの色を取得します。
+            </summary>
+            <param name="dgv">DataGridView</param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.SetSpreadColor(FarPoint.Win.Spread.FpSpread)">
+            <summary>
+            Spreadの色を取得します。
+            </summary>
+            <param name="sheet">FpSpread</param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.SetGcMultiRowColor(GrapeCity.Win.MultiRow.GcMultiRow)">
+            <summary>
+            GcMultiRowの色を取得します。
+            </summary>
+            <param name="multiRow">GcMultiRow</param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.GetFrameTitleBackColor">
+            <summary>
+            タイトル背景色を取得します。
+            </summary>
+            <returns>タイトル背景色</returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.GetFrameFooterBackColor">
+            <summary>
+            フッター背景色を取得します。
+            </summary>
+            <returns>フッター背景色</returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.GetFrameGridHeaderBackColor">
+            <summary>
+            表ヘッダー背景色を取得します。
+            </summary>
+            <returns>表ヘッダー背景色</returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.GetFrameGridSelectionBackColor">
+            <summary>
+            表選択行背景色を取得します。
+            </summary>
+            <returns>表選択行背景色</returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.GetGridControls(System.Windows.Forms.Control)">
+            <summary>
+            指定したコントロール配下のすべてのコントロールを取得します。
+            </summary>
+            <returns>タイトル背景色</returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.GetColorByRgbString(System.String,System.Drawing.Color)">
+            <summary>
+            カンマ区切りのRGBカラー文字列から色オブジェクトを取得します。
+            </summary>
+            <param name="strRgb">RGBカラー文字列</param>
+            <param name="defaultColor">デフォルトカラー</param>
+            <returns>色オブジェクト</returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.CountChar(System.String,System.Char)">
+            <summary>
+            文字の出現回数をカウントします。
+            </summary>
+            <param name="s">対象文字列</param>
+            <param name="c">対象文字</param>
+            <returns>出現回数</returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.FrameUtilites.GetMaxRowNumTankList">
+            <summary>
+            デバッグログに出力するタイトルと、内容を指定してデバッグログを出力します。
+            デバッグログは非ローミングユーザのApplication Dataフォルダに出力されます。
+            </summary>
+            <returns>配給一覧最大行数</returns>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.IFrameBase">
+            <summary>
+            本システムで使用するフォームの必要なインタフェースを定義します。
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.IFrameBase.InitFrame">
+            <summary>
+            フォームを初期化します。主にフォームのインスタンス化後の
+            ShowまたはShowDialogメソッドの実行前に初期化する必要がある
+            処理を行います。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.IFrameBase.FrameName">
+            <summary>
+            フォーム名（Form.Nameと等価の値）を取得・設定します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.IFrameBase.FrameText">
+            <summary>
+            フォーム表示文字列（Form.Textと等価の値）を取得・設定します。
+            </summary>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.InputMan.GcComboBoxExtensions">
+            <summary>
+            GcComboBoxの拡張メソッドを提供します。
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.InputMan.GcComboBoxExtensions.SelectFirstItem(GrapeCity.Win.Editors.GcComboBox)">
+            <summary>
+            先頭のアイテムを選択します。
+            </summary>
+            <param name="source"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.InputMan.GcComboBoxExtensions.ZeroPadding(GrapeCity.Win.Editors.GcComboBox,System.Int32)">
+            <summary>
+            指定した桁になるように 左に0（ゼロ）埋めした文字列を返します。
+            Null の場合は string.Empty を返します。
+            </summary>
+            <param name="source"></param>
+            <param name="digit">桁数</param>
+            <returns>0（ゼロ）埋めした文字列</returns>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.InputMan.GcDateTimeExtensions">
+            <summary>
+            GcDateTimeの拡張クラス
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.InputMan.GcDateTimeExtensions.GcDateTime_FieldLeave(System.Object,GrapeCity.Win.Editors.FieldEventArgs)">
+            <summary>
+            年の入力だけで当月、当日を補完し、年月日を形成するFieldLeaveイベント
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.InputMan.GcDateTimeExtensions.GcDateTime_FieldLeaveEx(System.Object,GrapeCity.Win.Editors.FieldEventArgs)">
+            <summary>
+            年、月、日の入力だけで未入力の当年、当月、当日を補完し、
+            年月日を形成するFieldLeaveイベント
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.InputMan.GcDateTimeExtensions.GcDateTime_FieldLeaveDefaultToday(System.Object,GrapeCity.Win.Editors.FieldEventArgs)">
+            <summary>
+            年、月、日の入力だけで未入力の当年、当月、当日を補完し、
+            年月日を形成するFieldLeaveイベント
+            </summary>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.InputMan.GcNumberExtensions">
+            <summary>
+            GcNumberの拡張メソッドを提供します。
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.InputMan.GcNumberExtensions.ZeroPadding(GrapeCity.Win.Editors.GcNumber,System.Int32)">
+            <summary>
+            指定した桁になるように 左に0（ゼロ）埋めした文字列を返します。
+            Null の場合は string.Empty を返します。
+            </summary>
+            <param name="source"></param>
+            <param name="digit">桁数</param>
+            <returns>0（ゼロ）埋めした文字列</returns>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.loggingmsg">
+            <summary>
+              ローカライズされた文字列などを検索するための、厳密に型指定されたリソース クラスです。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.loggingmsg.ResourceManager">
+            <summary>
+              このクラスで使用されているキャッシュされた ResourceManager インスタンスを返します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.loggingmsg.Culture">
+            <summary>
+              すべてについて、現在のスレッドの CurrentUICulture プロパティをオーバーライドします
+              現在のスレッドの CurrentUICulture プロパティをオーバーライドします。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.loggingmsg.C10001">
+            <summary>
+              {0} に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.loggingmsg.C10002">
+            <summary>
+              {0}：{1} に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.loggingmsg.C10003">
+            <summary>
+              {0}コード 変更前:{1} 変更後:{2} に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.MailHelper">
+            <summary>
+            メール送信のヘルパークラスです。
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.MailHelper.SendMail(SendGrid.Helpers.Mail.EmailAddress,System.Collections.Generic.List{SendGrid.Helpers.Mail.EmailAddress},System.Collections.Generic.List{System.String},System.String,System.Collections.Generic.List{System.Collections.Generic.Dictionary{System.String,System.String}})">
+            <summary>
+            メールを一括送信します。
+            </summary>
+            <param name="sender">送信者アドレス</param>
+            <param name="recipientList">受信者アドレスのリスト</param>
+            <param name="titles">メールタイトルのリスト</param>
+            <param name="body">メール本文</param>
+            <param name="substitutions">送信先毎にメール本文を置換する為のディクショナリ</param>
+            <returns></returns>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.ActionMenuItems">
+            <summary>
+            操作メニューの項目を定義した列挙体です。
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.ActionMenuItems.ChangeCode">
+            <summary>
+            コード変更
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.ActionMenuItems.New">
+            <summary>
+            新規作成 [F2]
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.ActionMenuItems.ExportCsv">
+            <summary>
+            CSV出力 [F8]
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.ActionMenuItems.ImportCsv">
+            <summary>
+            CSV取込 [F8]
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.ActionMenuItems.PrintToScreen">
+            <summary>
+            プレビュー [F7]
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.ActionMenuItems.EditCancel">
+            <summary>
+            編集取消 [F6]
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.ActionMenuItems.Delete">
+            <summary>
+            削除 [Shift+F8]
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.ActionMenuItems.Select">
+            <summary>
+            選択 [F7]
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.ActionMenuItems.Close">
+            <summary>
+            終了 [F1]
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.ActionMenuItems.Update">
+            <summary>
+            保存 [F7]
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.ActionMenuItems.Separator">
+            <summary>
+            セパレータ
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.ActionMenuItems.DeleteAllDtl">
+            <summary>
+            全明細削除 [Shift+F8]
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.ActionMenuItems.Copy">
+            <summary>
+            分割 [F3]
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.ActionMenuItems.Send">
+            <summary>
+            送信 [F7]
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.ActionMenuItems.DelPrintSetting">
+            <summary>
+            印刷設定の削除
+            </summary>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.PrintActionMenuItems">
+            <summary>
+            印刷操作メニューの項目を定義した列挙体です。
+            主に印刷指示画面で使用するメニュー項目です。
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.PrintActionMenuItems.Close">
+            <summary>
+            終了 [F1]
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.PrintActionMenuItems.PrintToScreen">
+            <summary>
+            印刷プレビュー [F7]
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.PrintActionMenuItems.Separator">
+            <summary>
+            セパレータ
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.PrintActionMenuItems.DelPrintSetting">
+            <summary>
+            印刷設定の削除
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.PrintActionMenuItems.ExecProc">
+            <summary>
+            実行 [F7]
+            </summary>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.ActionMenuClickEventArgs">
+            <summary>
+            操作メニューのクリックイベントのイベントデータを格納するクラスです。
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.ActionMenuClickEventArgs.#ctor(Jpsys.HaishaManageV10.FrameLib.ActionMenuItems)">
+            <summary>
+            操作メニューの項目を表す列挙体を指定して、本イベントデータクラスの
+            インスタンスを初期化します。
+            </summary>
+            <param name="clickedMenuItem">操作メニューの項目を表す列挙体</param>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.ActionMenuClickEventArgs.ClickedMenuItem">
+            <summary>
+            クリックされた項目に該当する操作メニューの列挙体の値を
+            取得します。
+            </summary>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.PrintActionMenuClickEventArgs">
+            <summary>
+            印刷操作メニューのクリックイベントのイベントデータを格納するクラスです。
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.PrintActionMenuClickEventArgs.#ctor(Jpsys.HaishaManageV10.FrameLib.PrintActionMenuItems)">
+            <summary>
+            印刷操作メニューの項目を表す列挙体を指定して、本イベントデータクラスの
+            インスタンスを初期化します。
+            </summary>
+            <param name="clickedMenuItem">印刷操作メニューの項目を表す列挙体</param>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.PrintActionMenuClickEventArgs.ClickedMenuItem">
+            <summary>
+            クリックされた項目に該当する印刷操作メニューの列挙体の値を
+            取得します。
+            </summary>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.AddActionMenuItem">
+            <summary>
+            フォームのMenuStripに追加する操作メニューを保持し、必要な
+            MenuStripに操作メニューを追加および追加したメニューを制御
+            する一連の機能を提供するクラスです。
+            </summary>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.AddActionMenuItem.ActionMenuClickDelagate">
+            <summary>
+            メニューのクリックイベント発生用のイベントデリゲート
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="E:Jpsys.HaishaManageV10.FrameLib.AddActionMenuItem.ActionMenuClick">
+            <summary>
+            操作メニューのいずれかの項目がクリックされたときに発生するイベントです。
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.AddActionMenuItem.OnActionMenuClick(Jpsys.HaishaManageV10.FrameLib.ActionMenuClickEventArgs)">
+            <summary>
+            操作メニューのいずれかの項目がクリックされたときのイベントを発生させます。
+            </summary>
+            <param name="e">イベントデータ</param>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.AddActionMenuItem._menuItemTableByMenu">
+            <summary>
+            表示対象のメニューをメニューオブジェクトをキーにして、そのメニューを
+            表す列挙体の値を格納します。
+            （クリックイベントのイベント発生時に使用）
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.AddActionMenuItem._menuItemTableByEnums">
+            <summary>
+            表示対象のメニューをそのメニューを表す列挙体の値をキーにして、メニュー
+            オブジェクトを格納します。
+            （メニューの項目を指定した処理に使用）
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.AddActionMenuItem._menuItemList">
+            <summary>
+            表示対象のメニューのメニューオブジェクトを格納します。
+            （メインのメニューに追加するときに使用）
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.AddActionMenuItem.SetCreatingItem(Jpsys.HaishaManageV10.FrameLib.ActionMenuItems)">
+            <summary>
+            操作メニューに表示したいメニュー項目の列挙体を指定して、本クラスのインスタンス
+            にメニューの作成を指示します。
+            </summary>
+            <param name="selectItems">表示したいメニュー項目を表す列挙体</param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.AddActionMenuItem.AddMenu(System.Windows.Forms.MenuStrip)">
+            <summary>
+            操作メニューを追加するMenuStripを指定して、指定した
+            MenuStripに操作メニューを追加します。
+            </summary>
+            <param name="topMenu"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.AddActionMenuItem.GetMenuItemBy(Jpsys.HaishaManageV10.FrameLib.ActionMenuItems)">
+            <summary>
+            指定したメニュー項目を取得します。
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.AddActionMenuItem.ActionMenuItemEnable(Jpsys.HaishaManageV10.FrameLib.ActionMenuItems,System.Boolean)">
+            <summary>
+            操作メニュー内のメニューの有効無効を切り替えます。
+            </summary>
+            <param name="selectItems">有効無効を切り替えるメニュー項目を表す列挙体</param>
+            <param name="enableVal">有効無効の値</param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.AddActionMenuItem.m_item_Click(System.Object,System.EventArgs)">
+            <summary>
+            動的に作成した操作メニューの各項目のクリックイベント
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.AddPrintActionMenuItem">
+            <summary>
+            フォームのMenuStripに追加する印刷操作メニューを保持し、必要な
+            MenuStripに印刷操作メニューを追加および、追加したメニューを制
+            御する一連の機能を提供するクラスです。
+            </summary>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.AddPrintActionMenuItem.PrintActionMenuClickDelagate">
+            <summary>
+            メニューのクリックイベント発生用のイベントデリゲート
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="E:Jpsys.HaishaManageV10.FrameLib.AddPrintActionMenuItem.PrintActionMenuClick">
+            <summary>
+            印刷操作メニューのいずれかの項目がクリックされたときに発生するイベントです。
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.AddPrintActionMenuItem.OnPrintActionMenuClick(Jpsys.HaishaManageV10.FrameLib.PrintActionMenuClickEventArgs)">
+            <summary>
+            印刷操作メニューのいずれかの項目がクリックされたときのイベントを発生させます。
+            </summary>
+            <param name="e">イベントデータ</param>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.AddPrintActionMenuItem._menuItemTableByMenu">
+            <summary>
+            表示対象のメニューをメニューオブジェクトをキーにして、そのメニューを
+            表す列挙体の値を格納します。
+            （クリックイベントのイベント発生時に使用）
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.AddPrintActionMenuItem._menuItemTableByEnums">
+            <summary>
+            表示対象のメニューをそのメニューを表す列挙体の値をキーにして、メニュー
+            オブジェクトを格納します。
+            （メニューの項目を指定した処理に使用）
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.AddPrintActionMenuItem._menuItemList">
+            <summary>
+            表示対象のメニューのメニューオブジェクトを格納します。
+            （メインのメニューに追加するときに使用）
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.AddPrintActionMenuItem.SetCreatingItem(Jpsys.HaishaManageV10.FrameLib.PrintActionMenuItems)">
+            <summary>
+            印刷操作メニューに表示したいメニュー項目の列挙体を指定して、本クラスのインスタンス
+            にメニューの作成を指示します。
+            </summary>
+            <param name="selectItems">表示したいメニュー項目を表す列挙体</param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.AddPrintActionMenuItem.AddMenu(System.Windows.Forms.MenuStrip)">
+            <summary>
+            印刷操作メニューを追加するMenuStripを指定して、指定した
+            MenuStripに操作メニューを追加します。
+            </summary>
+            <param name="topMenu"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.AddPrintActionMenuItem.GetMenuItemBy(Jpsys.HaishaManageV10.FrameLib.PrintActionMenuItems)">
+            <summary>
+            指定したメニュー項目を取得します。
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.AddPrintActionMenuItem.PrintActionMenuItemEnable(Jpsys.HaishaManageV10.FrameLib.PrintActionMenuItems,System.Boolean)">
+            <summary>
+            印刷操作メニュー内のメニューの有効無効を切り替えます。
+            </summary>
+            <param name="selectItems">有効無効を切り替えるメニュー項目を表す列挙体</param>
+            <param name="enableVal">有効無効の値</param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.AddPrintActionMenuItem.m_item_Click(System.Object,System.EventArgs)">
+            <summary>
+            動的に作成した印刷操作メニューの各項目のクリックイベント
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.message">
+            <summary>
+              ローカライズされた文字列などを検索するための、厳密に型指定されたリソース クラスです。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ResourceManager">
+            <summary>
+              このクラスで使用されているキャッシュされた ResourceManager インスタンスを返します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.Culture">
+            <summary>
+              すべてについて、現在のスレッドの CurrentUICulture プロパティをオーバーライドします
+              現在のスレッドの CurrentUICulture プロパティをオーバーライドします。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.LF1001011">
+            <summary>
+              F1： に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.LF1001021">
+            <summary>
+              F2： に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.LF1001031">
+            <summary>
+              F3： に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.LF1001041">
+            <summary>
+              F4： に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.LF1001051">
+            <summary>
+              F5：検索 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.LF1001061">
+            <summary>
+              F6：取消 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.LF1001071">
+            <summary>
+              F7：保存 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.LF1001072">
+            <summary>
+              F7：印刷 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.LF1001081">
+            <summary>
+              F8：削除 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.LF1001082">
+            <summary>
+              F8：プレビュー に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.LF1001083">
+            <summary>
+              F8：ﾌﾟﾚﾋﾞｭｰ に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.LF1001091">
+            <summary>
+              F9：終了 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.LF1001101">
+            <summary>
+              F10： に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.LF1001111">
+            <summary>
+              F11： に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.LF1001121">
+            <summary>
+              F12：項目後退 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.LF1002011">
+            <summary>
+              [F1]前移動 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.LF1002021">
+            <summary>
+              [F2]後移動 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.LF1002031">
+            <summary>
+              [F3] に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.LF1002041">
+            <summary>
+              [F4] に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.LF1002051">
+            <summary>
+              [F5]検索 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.LF1002061">
+            <summary>
+              [F6] に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.LF1002071">
+            <summary>
+              [F7]保存 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.LF1002072">
+            <summary>
+              [F7]印刷 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.LF1002081">
+            <summary>
+              [F8]削除 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.LF1002082">
+            <summary>
+              [F8]プレビュー に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.LF1002083">
+            <summary>
+              [F8]ﾌﾟﾚﾋﾞｭｰ に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.LF1002091">
+            <summary>
+              [F9]終了 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.LF1002101">
+            <summary>
+              [F10] に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.LF1002111">
+            <summary>
+              [F11] に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.LF1002121">
+            <summary>
+              [F12]項目後退 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.LT1101011">
+            <summary>
+              前移動 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.LT1101021">
+            <summary>
+              後移動 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.LT1101051">
+            <summary>
+              検索 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.LT1101071">
+            <summary>
+              保存 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.LT1101072">
+            <summary>
+              印刷 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.LT1101081">
+            <summary>
+              削除 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.LT1101082">
+            <summary>
+              プレビュー に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.LT1101083">
+            <summary>
+              ﾌﾟﾚﾋﾞｭｰ に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.LT1101091">
+            <summary>
+              終了 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.LT1101121">
+            <summary>
+              項目後退 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MC2401001">
+            <summary>
+              致命的なエラーが発生しました。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MC2401002">
+            <summary>
+              予期しないエラーが発生しました。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MC2401003">
+            <summary>
+              システム管理者に連絡してください。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2301001">
+            <summary>
+              ログインできません。入力したID・パスワードを確認してください。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2301002">
+            <summary>
+              すでに【{0}】は起動されています。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2302001">
+            <summary>
+              {0}の取得に失敗しました。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2302002">
+            <summary>
+              {0}の取得に失敗しました。処理を取り消します。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2302003">
+            <summary>
+              {0}の削除に失敗しました。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2302004">
+            <summary>
+              {0}の削除に失敗しました。処理を取り消します。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2302005">
+            <summary>
+              {0}の登録に失敗しました。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2302006">
+            <summary>
+              {0}の登録に失敗しました。処理を取り消します。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2302007">
+            <summary>
+              {0}の設定に誤りがあります。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2302008">
+            <summary>
+              {0}の作成に失敗しました。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303001">
+            <summary>
+              検索結果の件数が{0}件を超えています。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303002">
+            <summary>
+              検索結果の件数が{0}件を超えています。条件を絞って検索しなおしてください。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303003">
+            <summary>
+              {0}の件数が{1}件を超えています。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303004">
+            <summary>
+              このデータは他のデータで使用されている為、削除できません。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303005">
+            <summary>
+              {0}の{1}に失敗しました。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303006">
+             <summary>
+               「{0}」の文字数が長すぎます。
+            取込対象ファイルの{1}行目を確認してください。 に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303007">
+             <summary>
+               {0}が{1}に存在しません。
+            取込対象ファイルの{2}行目を確認してください。 に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303008">
+             <summary>
+               {0}が重複しています。
+            取込対象ファイルの{1}行目を確認してください。 に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303009">
+            <summary>
+              {0}の{1}にアクセスできません。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303010">
+             <summary>
+               {0}まで月次締処理済みです。
+            上記日付までのデータを追加、編集することはできません。 に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303011">
+             <summary>
+               請求済みのデータが存在します。
+            このデータを編集することはできません。 に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303012">
+             <summary>
+               支払済みのデータが存在します。
+            このデータを編集することはできません。 に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303013">
+             <summary>
+               {0}まで月次締処理済みです。
+            上記日付までのデータを追加、編集することはできません。 に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303014">
+             <summary>
+               {0}まで請求済みです。
+            上記日付までのデータを追加、編集することはできません。({1}行目) に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303015">
+             <summary>
+               {0}まで支払済みです。
+            上記日付までのデータを追加、編集することはできません。({1}行目) に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303016">
+             <summary>
+               {0}まで月次締処理済みです。
+            上記日付までのデータを追加、編集することはできません。 に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303017">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303018">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303019">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303020">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303021">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303022">
+            <summary>
+              まだ「月次締処理」を行っていません。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303023">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303024">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303025">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303026">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303027">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303028">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303029">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303030">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303031">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303032">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303033">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303034">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303035">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303036">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303037">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303038">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303039">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303040">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303041">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303042">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303043">
+            <summary>
+              他の画面から更新されているため、更新できません。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303044">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303045">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303046">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303047">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303048">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303049">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303050">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303051">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303052">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303053">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303054">
+            <summary>
+              ファイルの形式が不正です。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303055">
+             <summary>
+               「{0}」の形式が不正です。
+            取込対象ファイルの{1}行目を確認してください。 に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303056">
+             <summary>
+               「{0}」の桁数が不正です。
+            取込対象ファイルの{1}行目を確認してください。 に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303057">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303058">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303059">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303060">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303061">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.ME2303062">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MI2001001">
+            <summary>
+              正常に終了しました。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MI2001002">
+            <summary>
+              正常に登録されました。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MI2001003">
+            <summary>
+              正常に更新されました。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MI2001004">
+            <summary>
+              正常に削除されました。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MI2001005">
+            <summary>
+              変更内容は次回ログイン時に反映します。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MI2001006">
+            <summary>
+              コードが変更されました。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MI2001007">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MI2001008">
+            <summary>
+              正常に移動されました。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MI2001009">
+            <summary>
+              正常に設定されました。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MI2001010">
+            <summary>
+              印刷設定を削除しました。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MI2001011">
+            <summary>
+              正常に実行されました。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MI2001012">
+            <summary>
+              正常に保存されました。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MI2001013">
+             <summary>
+               正常に保存されました。
+            保存データ継承し、新規伝票を作成できます。 に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MI2001014">
+            <summary>
+              {0}件作成されました。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MI2001015">
+            <summary>
+              正常に取り込まれました。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MI2001016">
+            <summary>
+              チェックが完了しました。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MI2001017">
+            <summary>
+              正常に作成されました。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MI2001018">
+            <summary>
+              処理が完了しました。ファイルを開きます。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MI2001019">
+            <summary>
+              No.{0}で保存されました。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MI2001020">
+             <summary>
+               {0}件更新対象中{1}件更新されませんでした。
+            最新データを確認してください。 に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2101001">
+            <summary>
+              終了してもよろしいですか？ に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2101002">
+            <summary>
+              登録してもよろしいですか？ に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2101003">
+            <summary>
+              更新してもよろしいですか？ に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2101004">
+            <summary>
+              削除してもよろしいですか？ に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2101005">
+            <summary>
+              取消してもよろしいですか？ に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2101006">
+            <summary>
+              実行してもよろしいですか？ に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2101007">
+            <summary>
+              送信してもよろしいですか？ に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2101008">
+            <summary>
+              設定してもよろしいですか？ に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2101009">
+            <summary>
+              印刷設定を削除してもよろしいですか？ に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2101010">
+            <summary>
+              保存してもよろしいですか？ に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2101011">
+            <summary>
+              取込してもよろしいですか？ に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2102001">
+             <summary>
+               編集中のデータは保存されません。
+            終了してもよろしいですか？ に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2102002">
+            <summary>
+              該当データの変更を保存しますか？ に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2102003">
+            <summary>
+              表示中のデータを削除してもよろしいですか？ に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2102004">
+            <summary>
+              選択されたデータを削除してもよろしいですか？ に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2102005">
+            <summary>
+              選択された行を削除してもよろしいですか？ に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2102006">
+            <summary>
+              システムを終了してもよろしいですか？ に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2102007">
+            <summary>
+              編集内容を保存してもよろしいですか？ に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2102008">
+            <summary>
+              編集内容を取消してもよろしいですか？ に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2102009">
+            <summary>
+              {0}を変更してもよろしいですか？ に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2102010">
+             <summary>
+               選択中の行を削除してもよろしいですか？
+            ※確定するには保存をしてください。 に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2102011">
+            <summary>
+              選択中の行の削除を取り消しますか？ に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2102012">
+             <summary>
+               表示された伝票の納入書を印刷します。
+            よろしいですか？ に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2102013">
+            <summary>
+              {0}行目を行削除します。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2102014">
+            <summary>
+              {0}行目に行挿入します。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2102015">
+            <summary>
+              ロット解除します。よろしいですか？ に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2102016">
+            <summary>
+              現在ロット設定されているデータをすべて{0}します。よろしいですか？ に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2102017">
+             <summary>
+               現在ロット設定されている下記項目をすべて更新します。よろしいですか？
+            
+            【更新項目】
+            積込日・積込区分・納入日・車両・乗務員
+            自傭区分・傭車先{0} に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2102018">
+            <summary>
+              現在ロット設定されているデータをすべて削除します。よろしいですか？ に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2102019">
+            <summary>
+              {0}を起動します。よろしいですか？ に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2102020">
+            <summary>
+              CSVファイルを出力します。よろしいですか？ に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2102021">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2102022">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2102023">
+            <summary>
+              続けて印刷を行いますか？ に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2102024">
+             <summary>
+               入力されている内容は上書きされます。
+            よろしいですか？ に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2102025">
+             <summary>
+               表示されている明細をすべて保存します。
+            よろしいですか？
+            ※編集していない明細も保存されますのでご注意ください。 に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2102026">
+             <summary>
+               {0}の行のデータが選択された行へ複写されます。
+            よろしいですか？ に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2102027">
+             <summary>
+               出力先に既に存在します。
+            上書きしますか？ に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2102028">
+             <summary>
+               得意先［{0}］は部門管理する得意先ですが部門が入力されていません。
+            そのまま処理を続行しますか？ に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2102029">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2102030">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2102031">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2102032">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2102033">
+            <summary>
+              表示されているすべての明細を削除しますか？ に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2102034">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2102035">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2102036">
+             <summary>
+               指定された{0}は無効に設定されています。
+            よろしいですか？ に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2102037">
+             <summary>
+               表示中の全明細を削除します。
+            よろしいですか？ に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MQ2102038">
+             <summary>
+               全明細を削除します。
+            よろしいですか？ に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2201001">
+            <summary>
+              指定したデータは存在していません。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2201002">
+            <summary>
+              指定したデータは既に存在しています。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2201003">
+            <summary>
+              入力したデータは存在していません。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2201004">
+            <summary>
+              入力したデータは既に存在しています。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2201005">
+            <summary>
+              指定したデータは削除されています。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2201006">
+            <summary>
+              入力したデータは削除されています。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2201007">
+            <summary>
+              {0}した{1}は存在していません。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2201008">
+            <summary>
+              {0}した{1}は既に存在しています。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2201009">
+            <summary>
+              {0}した{1}は削除されています。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2201010">
+            <summary>
+              {0}は存在していません。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2201011">
+            <summary>
+              {0}は既に存在しています。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2201012">
+            <summary>
+              {0}は削除されています。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2201013">
+            <summary>
+              先頭データです。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2201014">
+            <summary>
+              最終データです。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2201015">
+            <summary>
+              該当するデータがありません。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2201016">
+            <summary>
+              入力したデータは使用停止中です。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2201017">
+            <summary>
+              指定された{0}データは使用停止中です。{1} に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2201018">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2201019">
+            <summary>
+              対象のデータは削除されています。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2201020">
+            <summary>
+              出力する画像がありません。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2201021">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2201022">
+            <summary>
+              処理対象の{0}が存在しません。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2202001">
+            <summary>
+              {0}は{1}文字以内です。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2202002">
+            <summary>
+              {0}は{1}文字以上です。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2202003">
+            <summary>
+              {0}は{1}以下です。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2202004">
+            <summary>
+              {0}は{1}以上です。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2202005">
+            <summary>
+              処理対象外の年月です。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2202006">
+            <summary>
+              処理対象外の日付です。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2202007">
+            <summary>
+              処理対象外の時刻です。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2202008">
+            <summary>
+              {0}より古い年月は設定できません。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2202009">
+            <summary>
+              {0}より新しい年月は設定できません。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2202010">
+            <summary>
+              {0}より古い日付は設定できません。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2202011">
+            <summary>
+              {0}より新しい日付は設定できません。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2202012">
+            <summary>
+              {0}より古い時刻は設定できません。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2202013">
+            <summary>
+              {0}より新しい時刻は設定できません。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2202014">
+            <summary>
+              {0}より{1}は設定できません。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2202015">
+            <summary>
+              {0}より{1}は{2}できません。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2202016">
+            <summary>
+              {0}は{1}できません。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2202017">
+            <summary>
+              {0}は{1}より{2}を入力してください。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2202018">
+            <summary>
+              {0}の範囲指定に誤りがあります。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2202019">
+            <summary>
+              {0}は「{1}～{2}」の範囲で入力してください。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2202020">
+             <summary>
+               FAXの設定が完了していません。
+            メニューバーから「FAXの設定」をクリックし、FAXの設定を行ってください。 に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2202021">
+            <summary>
+              {0}は{1}以降を入力してください。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2202022">
+            <summary>
+              本日以前の日付は指定できません。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2202023">
+            <summary>
+              {0}より前の日付は入力できません に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2202024">
+            <summary>
+              {0}から{1}まで7日間以上は設定はできません。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2202025">
+            <summary>
+              {0}～{1}を入力してください。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2202026">
+            <summary>
+              対象期間は{0}ヶ月以内で入力してください。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2202032">
+            <summary>
+              {0}を入力してください。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203001">
+            <summary>
+              {0}を入力してください。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203002">
+            <summary>
+              明細が入力されていません。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203003">
+            <summary>
+              {0}明細が入力されていません。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203004">
+            <summary>
+              {0}が入力されていません。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203005">
+            <summary>
+              {0}は{1}です。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203006">
+            <summary>
+              パスワードが確認用と一致していません。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203007">
+            <summary>
+              システムパスワードが一致していません。入力内容を確認してください。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203008">
+            <summary>
+              修正対象を選択してください。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203009">
+            <summary>
+              明細が選択されていません。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203010">
+            <summary>
+              {0}が重複しています。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203011">
+            <summary>
+              {0}には{1}を入力してください。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203012">
+            <summary>
+              {0}が選択されていません。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203013">
+            <summary>
+              {0}は{1}してください。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203014">
+            <summary>
+              {0}は{1}以内で入力してください。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203015">
+            <summary>
+              {0}に不正な値が入力されました。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203016">
+            <summary>
+              まいと～くFAX ActiveX コントロールの利用開始に失敗しました。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203017">
+            <summary>
+              FAX送信処理に失敗しました。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203018">
+             <summary>
+               FAX送信ソフトがインストールされていません。
+            システム管理者にお問い合わせください。 に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203019">
+            <summary>
+              {0}で桁あふれが発生しました。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203020">
+             <summary>
+               設定されているプリンタが見つかりません。
+            プリンタが削除された可能性があります。
+            再度、設定を行ってください。 に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203021">
+             <summary>
+               プレビューでは確定データ作成は行えません。
+            確定データは「印刷」ボタン押下時のみ作成されます。 に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203022">
+            <summary>
+              開始日～終了日は過去日以外指定できません。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203023">
+            <summary>
+              選択された{0}の保存パスは見つかりません。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203024">
+            <summary>
+              {0}は、エクセルファイルしか指定できません。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203025">
+            <summary>
+              {0}は、パワーポイントファイルしか指定できません。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203026">
+            <summary>
+              一覧から削除する{0}を選択してください。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203027">
+            <summary>
+              {0}しか指定できません。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203028">
+            <summary>
+              CSVファイルが {0}件 出力されました。ファイルを開きますか？ に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203029">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203030">
+            <summary>
+              開始＞終了です。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203031">
+            <summary>
+              出力対象とする項目を選択してください。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203032">
+            <summary>
+              出力解除する項目を選択してください。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203033">
+            <summary>
+              出力対象の項目がありません。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203034">
+            <summary>
+              個別指定の最大数{0}を超えています。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203035">
+            <summary>
+              {0}になるまで処理を実行することはできません。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203036">
+            <summary>
+              保存する画像ファイルがありません。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203037">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203038">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203039">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203040">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203041">
+             <summary>
+               出力先が見つかりません。
+            {0}
+            出力先を確認するか、変更してください。 に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203042">
+             <summary>
+               {0}まで請求締め確定処理済みです。
+            上記日付までのデータを編集、削除することはできません。 に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203043">
+             <summary>
+               この伝票は、{0}分までの請求締め処理の対象分です。
+            この伝票を編集、削除した場合は、請求締め処理をもう一度やり直してください。 に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203044">
+             <summary>
+               この伝票は、{0}分までの請求締め処理の対象分です。
+            処理を続行した場合、請求締め処理をやり直す必要があります。
+            このまま処理を続行する場合は「はい」、中止する場合は「いいえ」を押してください。 に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203045">
+             <summary>
+               指定した得意先は、既に{0}分までの請求締め処理を開始しています。
+            処理を続行した場合、請求締め処理をやり直す必要があります。
+            このまま処理を続行する場合は「はい」、中止する場合は「いいえ」を押してください。 に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203046">
+            <summary>
+              伝票の修正・削除は、入力日+1日までです。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203047">
+            <summary>
+              現在、他の利用者にて請求処理が行われているため、処理できません。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203048">
+            <summary>
+              請求締切処理が行われていません。やり直してください。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203049">
+             <summary>
+               請求締切確定処理が行われていないため、処理できません。
+            締切クリア処理、または確定締切処理後に行ってください。 に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203050">
+             <summary>
+               {0}データを削除する権限はありません。
+            参照、または登録のみ可能です。 に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203051">
+             <summary>
+               {0}データを登録・削除する権限はありません。
+            参照のみ可能です。 に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203052">
+            <summary>
+               に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203053">
+            <summary>
+              「農場指定」「餌コード確定」「納入コメント」が設定されています。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203054">
+             <summary>
+               同じロットに設定されている配車情報と{0}が異なります！
+            {1} に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203055">
+            <summary>
+              同一 積込日・積込区分・納入日・車両・乗務員 のデータが存在します。ロット設定を行いますか？ に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203056">
+            <summary>
+              積載容量を超えています！{0} に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203057">
+             <summary>
+               積込日・納入日の確認をしてください！
+            4日以上空いています。 に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203058">
+            <summary>
+              納入量＜＞{0}対象トン数です！ に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203059">
+            <summary>
+              積込日＜＞{0}対象日です！ に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203060">
+            <summary>
+              作業時間が重なっています！ に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203061">
+             <summary>
+               向こう{0}日間で、餌が変わります。
+            置き換えますか？ に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203062">
+             <summary>
+               この餌はパターンに含まれていません！
+            {0}：{1} に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203063">
+             <summary>
+               パターンの餌納入量を超えています！
+            {0}：{1}
+            今後：{2}　予定：{3} に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203064">
+            <summary>
+              {0}この農場タンクへは移動できません！ に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203065">
+            <summary>
+              換羽期間が重複しています。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203066">
+             <summary>
+               {0}：{1}は有薬飼料です！
+            {2}に出荷が予定されています！ に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203067">
+            <summary>
+              金額が大きすぎます！{0} に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203068">
+             <summary>
+               パターンの合計餌納入量を超えています！
+            今後：{0}　予定：{1} に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203069">
+            <summary>
+              最大表示行数の{0}件を超えています。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203070">
+            <summary>
+              選択された{0}は存在しません。{1} に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203071">
+            <summary>
+              指定した{0}は使用できません。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203072">
+             <summary>
+               {0}に使用できない文字が含まれています。
+            {1} に類似しているローカライズされた文字列を検索します。
+             </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203073">
+            <summary>
+              {0}が作成されていません に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203074">
+            <summary>
+              このタンクは保証なしに設定されています！ に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203075">
+            <summary>
+              未使用データに設定されていますが、使用しますか？ に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203076">
+            <summary>
+              請求部門に設定されている得意先と異なる得意先は指定できません。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203077">
+            <summary>
+              支払日は締日以降の日付を入力してください。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203078">
+            <summary>
+              手形期日は支払日以降の日付を入力してください。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.message.MW2203079">
+            <summary>
+              傭車先しか指定できません。 に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.MultiRow.DelegateAction">
+            <summary>
+            任意のデリゲートを実行するGcMultiRowのアクションを提供します。
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.MultiRow.DelegateAction.#ctor(System.Action{GrapeCity.Win.MultiRow.GcMultiRow})">
+            <summary>
+            実行するデリゲートを指定してインスタンスを初期化します。
+            </summary>
+            <param name="actionDelegate"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.MultiRow.DelegateAction.CanExecute(GrapeCity.Win.MultiRow.GcMultiRow)">
+            <summary>
+            実行可否を取得します。
+            </summary>
+            <param name="target"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.MultiRow.DelegateAction.OnExecute(GrapeCity.Win.MultiRow.GcMultiRow)">
+            <summary>
+            実行するデリゲートを取得します。
+            </summary>
+            <param name="target"></param>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.MultiRow.GcMultiRowExtensions">
+            <summary>
+            GcMultiRowの拡張クラスです。
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.MultiRow.GcMultiRowExtensions.CurrentRowIndex(GrapeCity.Win.MultiRow.GcMultiRow)">
+            <summary>
+            現在行のインデックスを取得します。
+            </summary>
+            <param name="multiRow"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.MultiRow.GcMultiRowExtensions.HasRow(GrapeCity.Win.MultiRow.GcMultiRow,System.Int32)">
+            <summary>
+            指定した行インデックスの行があるかを返します。
+            </summary>
+            <param name="multiRow"></param>
+            <param name="rowIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.MultiRow.GcMultiRowExtensions.AddRowInFrontOfNewRow(GrapeCity.Win.MultiRow.GcMultiRow)">
+            <summary>
+            行を新規行の前に追加します。
+            新規行がない場合は最終行に追加します。
+            </summary>
+            <param name="multiRow"></param>
+            <returns>追加した行のインデックス</returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.MultiRow.GcMultiRowExtensions.CellPositionToSelectableFirst(GrapeCity.Win.MultiRow.GcMultiRow)">
+            <summary>
+            セルポジションを選択可能な最初のセルに移動します。
+            セルの順序はTabIndexの値で決定します。
+            </summary>
+            <param name="multiRow"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.MultiRow.GcMultiRowExtensions.CellPositionToSelectableFirstOfCurrentRow(GrapeCity.Win.MultiRow.GcMultiRow)">
+            <summary>
+            セルポジションを選択可能な最初のセルに移動します。
+            セルの順序はTabIndexの値で決定します。
+            </summary>
+            <param name="multiRow">行インデックス</param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.MultiRow.GcMultiRowExtensions.CellPositionToSelectableFirstOrder(GrapeCity.Win.MultiRow.GcMultiRow,System.Int32)">
+            <summary>
+            セルポジションを選択可能な最初のセルに移動します。
+            セルの順序はTabIndexの値で決定します。
+            </summary>
+            <param name="multiRow"></param>
+            <param name="rowIndex">行インデックス</param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.MultiRow.GcMultiRowExtensions.GetSelectableCellPositionOfRow(GrapeCity.Win.MultiRow.GcMultiRow,System.Int32,Jpsys.HaishaManageV10.FrameLib.MultiRow.SearchOrderType)">
+            <summary>
+            指定した行で選択可能なセルのポジションを返します。
+            </summary>
+            <param name="multiRow"></param>
+            <param name="rowIndex">行インデックス</param>
+            <param name="searchOrderType">検索する順序の指定</param>
+            <returns></returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.MultiRow.GcMultiRowExtensions.GetSelectableCellPositionOfRow(GrapeCity.Win.MultiRow.GcMultiRow,System.Int32,System.Int32,Jpsys.HaishaManageV10.FrameLib.MultiRow.SearchOrderType)">
+            <summary>
+            指定した行で選択可能なセルのポジションを返します。
+            </summary>
+            <param name="multiRow"></param>
+            <param name="rowIndex">行インデックス</param>
+            <param name="searchStartCellIndex">検索開始セル</param>
+            <param name="searchOrderType">検索する順序の指定</param>
+            <returns></returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.MultiRow.GcMultiRowExtensions.SetCurrentCellPosition(GrapeCity.Win.MultiRow.GcMultiRow,System.Int32,System.String)">
+            <summary>
+            現在セルの位置を設定します。
+            指定したセル位置が選択不可の場合は、同じ行で次に選択可能なセルを設定します。
+            </summary>
+            <param name="multiRow"></param>
+            <param name="rowIndex"></param>
+            <param name="cellName"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.MultiRow.GcMultiRowExtensions.HasEditingControl(GrapeCity.Win.MultiRow.GcMultiRow)">
+            <summary>
+            編集コントロールのインスタンスを保持しているかを返します。
+            </summary>
+            <param name="multiRow"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.MultiRow.GcMultiRowExtensions.GetEditingOrCellValue(GrapeCity.Win.MultiRow.GcMultiRow,System.Int32,System.String)">
+            <summary>
+            行インデックス、セル名を指定してセルの値を取得します。
+            編集セルと位置が重なった場合は編集セルから値を取得します。
+            </summary>
+            <returns>キーのセルの値</returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.MultiRow.GcMultiRowExtensions.GetEditingControlValue(System.Windows.Forms.Control)">
+            <summary>
+            MultiRowの編集コントロールからCell.Valueに相当するものを取得します。
+            </summary>
+            <param name="editingControl">MultiRowの編集コントロール（IEditingControlを実装するオブジェクト）</param>
+            <returns>Cell.Valueに相当する値</returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.MultiRow.GcMultiRowExtensions.GetEditingControlValue(GrapeCity.Win.MultiRow.GcMultiRow)">
+            <summary>
+            編MultiRowの編集コントロールからCell.Valueに相当するものを取得します。
+            </summary>
+            <param name="multiRow"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.MultiRow.GcMultiRowExtensions.SetEditingControlValueOrCellValue(GrapeCity.Win.MultiRow.GcMultiRow,System.Int32,System.String,System.Object)">
+            <summary>
+            MultiRowシート、行インデックス、セル名を指定して、値を指定したセルに設定します。
+            編集セルと位置が重なった場合は編集セルに値を設定します。
+            </summary>
+            <returns>キーのセルの値</returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.MultiRow.GcMultiRowExtensions.SetEditingControlValue(GrapeCity.Win.MultiRow.GcMultiRow,System.Object)">
+            <summary>
+            編集コントロールに値を設定します。
+            </summary>
+            <param name="multiRow"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.MultiRow.GcMultiRowExtensions.SetEditingControlValue(System.Windows.Forms.Control,System.Object)">
+            <summary>
+            MultiRowの編集コントロールのCell.Valueに相当するものに値を設定します。
+            </summary>
+            <param name="editingControl">MultiRowの編集コントロール（IEditingControlを実装するオブジェクト）</param>
+            <param name="value">値</param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.MultiRow.GcMultiRowExtensions.BeginEdit(GrapeCity.Win.MultiRow.GcMultiRow,System.Object)">
+            <summary>
+            セルの編集を開始して、編集セルに指定した値を設定します。
+            </summary>
+            <param name="multiRow"></param>
+            <param name="value">編集セルに設定する値</param>
+            <returns></returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.MultiRow.GcMultiRowExtensions.HasCurrentCell(GrapeCity.Win.MultiRow.GcMultiRow)">
+            <summary>
+            CurrentCell がnullかどうかを判断してnullでなければ true を返します。
+            </summary>
+            <param name="multiRow"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.MultiRow.GcMultiRowExtensions.RemoveRows(GrapeCity.Win.MultiRow.GcMultiRow,System.Collections.Generic.IEnumerable{System.Int32})">
+            <summary>
+            指定したインデックスの行をRemoveします。
+            </summary>
+            <param name="multiRow"></param>
+            <param name="rowIndexes"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.MultiRow.GcMultiRowExtensions.GetRows(GrapeCity.Win.MultiRow.GcMultiRow,System.Int32[])">
+            <summary>
+            指定した行インデックスの行を取得します。
+            </summary>
+            <param name="multiRow"></param>
+            <param name="indexes"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.MultiRow.GcMultiRowExtensions.GetRowCountWithoutNewRow(GrapeCity.Win.MultiRow.GcMultiRow)">
+            <summary>
+            新規行を除いた行数を取得します。
+            </summary>
+            <param name="multiRow"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.MultiRow.GcMultiRowExtensions.ShowAllRows(GrapeCity.Win.MultiRow.GcMultiRow)">
+            <summary>
+            すべての行のVisbleをtrueに設定して表示します。
+            </summary>
+            <param name="multiRow"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.MultiRow.GcMultiRowExtensions.SetValueShownRows(GrapeCity.Win.MultiRow.GcMultiRow,System.String,System.Object)">
+            <summary>
+            新規行を除く表示されているすべての行に指定した値を設定します。
+            </summary>
+            <param name="multiRow"></param>
+            <param name="cellName"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.MultiRow.GcMultiRowExtensions.SetValueRows(GrapeCity.Win.MultiRow.GcMultiRow,System.String,System.Object,System.Func{GrapeCity.Win.MultiRow.Row,System.Boolean})">
+            <summary>
+            新規行を除いて、条件を満たす行に指定した値を設定します。
+            </summary>
+            <param name="multiRow"></param>
+            <param name="cellName">セル名</param>
+            <param name="value">値</param>
+            <param name="rowPredicate">値を設定する行の条件</param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.MultiRow.GcMultiRowExtensions.GetOrNewRowTag``1(GrapeCity.Win.MultiRow.GcMultiRow,System.Int32)">
+            <summary>
+            指定した行のタグに格納されているオブジェクトを取得します。
+            タグに格納されているオブジェクトなければオブジェクトを作成して返します。
+            </summary>
+            <typeparam name="T">取得するオブジェクトの型</typeparam>
+            <param name="multiRow">GcMultiRowオブジェクト</param>
+            <param name="rowIndex">行インデックス</param>
+            <returns></returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.MultiRow.GcMultiRowExtensions.MoveCurrentRowToNext(GrapeCity.Win.MultiRow.GcMultiRow)">
+            <summary>
+            選択行を次行に動かします。
+            選択行がない場合は先頭行を選択します。
+            最終行を選択している場合は選択をなくします。
+            </summary>
+            <param name="multiRow"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.MultiRow.GcMultiRowExtensions.IsNewRow(GrapeCity.Win.MultiRow.GcMultiRow,System.Int32)">
+            <summary>
+            指定したインデックスの行が新規行かどうかを返します。
+            </summary>
+            <param name="multiRow"></param>
+            <param name="rowIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.MultiRow.GcMultiRowExtensions.GetRowsWithoutNewRow(GrapeCity.Win.MultiRow.GcMultiRow)">
+            <summary>
+            新規行を除いた行を取得します。
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.MultiRow.InitialSettingHelper">
+            <summary>
+            初期設定をサポートします。
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.MultiRow.InitialSettingHelper.InitialShortcutKeySetting(GrapeCity.Win.MultiRow.GcMultiRow)">
+            <summary>
+            ショートカットキーの初期設定を行います。
+            MultiRowコントロール内で完結する設定だけ行われます。
+            MultiRow外のコンテキストを参照する設定は各画面で対応してください。
+            </summary>
+            <param name="multirRow"></param>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.MultiRow.ClearEditAction">
+            <summary>
+            CellClear処理を行うユーザ定義アクションクラスです。
+            </summary>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.MultiRow.RowExtensions">
+            <summary>
+            Row の拡張メソッドを提供します。
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.MultiRow.RowExtensions.SetCellsStyle(GrapeCity.Win.MultiRow.Row,System.Action{GrapeCity.Win.MultiRow.CellStyle})">
+            <summary>
+            すべてのセルのスタイルを設定します。
+            </summary>
+            <param name="source"></param>
+            <param name="setStyleDelegate">スタイルを設定するデリゲート</param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.MultiRow.RowExtensions.GetEditingOrCellValue(GrapeCity.Win.MultiRow.Row,System.String)">
+            <summary>
+            指定したセルの値を取得します。セルが編集中の場合は編集値を取得します。
+            </summary>
+            <param name="source"></param>
+            <param name="cellName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.MultiRow.RowExtensions.GetValue(GrapeCity.Win.MultiRow.Row,System.String)">
+            <summary>
+            指定したセルの値を取得します。
+            </summary>
+            <param name="source"></param>
+            <param name="cellName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.MultiRow.RowExtensions.SetValue(GrapeCity.Win.MultiRow.Row,System.String,System.Object)">
+            <summary>
+            指定したセルに値を設定します。
+            </summary>
+            <param name="source"></param>
+            <param name="cellName"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.MultiRow.RowExtensions.CopyValueTo(GrapeCity.Win.MultiRow.Row,System.String,System.Int32)">
+            <summary>
+            指定したセルの値をコピーします。
+            </summary>
+            <param name="source"></param>
+            <param name="cellName">セル名</param>
+            <param name="rowIndex">コピー先の行インデックス</param>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.MultiRow.SearchOrderType">
+            <summary>
+            セルを検索するときの順序を指定します。
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.MultiRow.SearchOrderType.CellIndex">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.MultiRow.SearchOrderType.TabIndex">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.MultiRow.TemplateInitializer">
+            <summary>
+            テンプレートの初期化を提供します。
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.MultiRow.TemplateInitializer._mrow">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.MultiRow.TemplateInitializer.#ctor(GrapeCity.Win.MultiRow.GcMultiRow)">
+            <summary>
+            </summary>
+            <param name="mrow"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.MultiRow.TemplateInitializer.Initialize">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.Spread.CellExtensions">
+            <summary>
+            セルの拡張メソッドを定義します。
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.Spread.CellExtensions.GetValue``1(FarPoint.Win.Spread.Cell)">
+            <summary>
+            セルの値を取得します。
+            セル値の型が値型で、セルの値が null の場合は既定値を返します。
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="cell"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.Spread.CellExtensions.GetValue(FarPoint.Win.Spread.Cell,System.Type)">
+            <summary>
+            セルの値を取得します。
+            </summary>
+            <param name="cell"></param>
+            <param name="conversionType">返すオブジェクトの型</param>
+            <returns></returns>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.Spread.Cells.CustomDateTimeCellType">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.Spread.Cells.CustomDateTimeCellType.Format(System.Object)">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.Spread.Cells.CustomNumberCellType">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.Spread.Cells.CustomNumberCellType.HideZero">
+            <summary>
+            ゼロを非表示にするかどうか
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.Spread.Cells.CustomNumberCellType.Format(System.Object)">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.Spread.CellTypeSettingAction">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.Spread.CellTypeSettingAction.CellType">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.Spread.CellTypeSettingAction.Setting">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.Spread.CellTypeManager">
+            <summary>
+            セルに設定する値の型とセル型の紐づけを管理します。
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.Spread.CellTypeManager.RegisterCellTypes">
+            <summary>
+            セル型の登録処理をします。
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.Spread.CellTypeManager.RegisterCellType``2">
+            <summary>
+            列に設定する値のTypeオブジェクトと対応するセル型を表すICellTypeオブジェクトを登録します。
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TCell"></typeparam>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.Spread.CellTypeManager.RegisterCellType``2(System.Action{``1})">
+            <summary>
+            列に設定する値のTypeオブジェクトと対応するセル型を表すICellTypeオブジェクトを登録します。
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TCell"></typeparam>
+            <param name="settingAction">CellTypeオブジェクトに設定する内容</param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.Spread.CellTypeManager.GetCellType(System.Type)">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.Spread.ComboItem">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.Spread.ComboItem.#ctor(System.String,System.String)">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.Spread.ComboItem.Data">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.Spread.ComboItem.DisplayText">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.Spread.CurrentRowChangedEventRaiser">
+            <summary>
+            現在行の変更をハンドルして通知します。
+            シートが複数のSPREADは未対応です。
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.Spread.CurrentRowChangedEventRaiser._currentRowIndex">
+            <summary>
+            現在行
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.Spread.CurrentRowChangedEventRaiser._fpSpread">
+            <summary>
+            対象のSPREAD
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.Spread.CurrentRowChangedEventRaiser.#ctor(FarPoint.Win.Spread.FpSpread)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.Spread.CurrentRowChangedEventRaiser.NotifySelectionChanged">
+            <summary>
+            手動で行変更を通知するときに呼び出します。
+            例えば、AddSelectionでセルの選択を設定した場合はSelectionChangedイベントが発生しないので
+            このメソッドを呼び出してください.
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.Spread.CurrentRowChangedEventRaiser.CurrentRowIndex">
+            <summary>
+            現在行のインデックスを返します。
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.Spread.CurrentRowChangedEventRaiser.RaiseEventIfSelectionRowIsChanged">
+            <summary>
+            現在行が変更されていれば、行変更選択イベントを通知します。
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.Spread.CurrentRowChangedEventRaiser.RaiseEventIfSelectionRowIsChanged(System.Int32)">
+            <summary>
+            現在行が変更されていれば、行変更選択イベントを通知します。
+            </summary>
+        </member>
+        <member name="E:Jpsys.HaishaManageV10.FrameLib.Spread.CurrentRowChangedEventRaiser.CurrentRowChanged">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.Spread.CurrentRowChangedEventRaiser.OnCurrentRowChanged(System.EventArgs)">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.Spread.CustomFpSpread">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.Spread.CustomFpSpread.#ctor">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.Spread.CustomFpSpread.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.Spread.CustomFpSpread.DoDragDropWithGhost(System.Object,System.Windows.Forms.DragDropEffects,System.String,System.Drawing.Font)">
+            <summary>
+            ゴースト付きで DragDrop を開始します。
+            ゴーストは ActiveRowにある先頭セルの文字列 をキャプチャします。
+            </summary>
+            <param name="data"></param>
+            <param name="allowEffects"></param>
+            <param name="ghostText">ゴーストのテキスト</param>
+            <param name="font">テキストのフォント</param>
+            <returns></returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.Spread.CustomFpSpread.DoDragDropWithGhost(System.Object,System.Windows.Forms.DragDropEffects)">
+            <summary>
+            ゴースト付きで DragDrop を開始します。
+            ゴーストは ActiveRowにある先頭セルの文字列 をキャプチャします。
+            </summary>
+            <param name="data"></param>
+            <param name="allowEffects"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.Spread.CustomFpSpread.DoDragDropWithGhostInternal(System.Object,System.Windows.Forms.DragDropEffects,System.Drawing.Bitmap,System.Drawing.Point)">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+            <param name="allowEffects"></param>
+            <param name="bitmap"></param>
+            <param name="dragPoint">イメージ対象とドラッグ点の相対位置　指定した分だけ左と上にゴースト位置がずれる</param>
+            <returns></returns>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.Spread.CustomFpSpread.components">
+            <summary>
+            必要なデザイナー変数です。
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.Spread.CustomFpSpread.Dispose(System.Boolean)">
+            <summary>
+            使用中のリソースをすべてクリーンアップします。
+            </summary>
+            <param name="disposing">マネージ リソースが破棄される場合 true、破棄されない場合は false です。</param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.Spread.CustomFpSpread.InitializeComponent">
+            <summary>
+            デザイナー サポートに必要なメソッドです。このメソッドの内容を 
+            コード エディターで変更しないでください。
+            </summary>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.Spread.FPSpreadExtensions">
+            <summary>
+            FPSpreadクラスの拡張メソッドを定義します。
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.Spread.FPSpreadExtensions.ExportToExcelSaveFileDialog(FarPoint.Win.Spread.FpSpread,System.String)">
+            <summary>
+            シートのデータをCSVファイルに出力します。
+            ファイルのパスはファイル選択のダイアログを表示します。
+            ヘッダは列ヘッダのみ出力します。
+            </summary>
+            <param name="spread"></param>
+            <param name="defaultFileName">ダイアログ画面に表示するファイル名の既定値</param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.Spread.FPSpreadExtensions.ExportToExcelSaveFileDialog(FarPoint.Win.Spread.FpSpread,System.String,FarPoint.Win.Spread.Model.IncludeHeaders)">
+            <summary>
+            シートのデータをCSVファイルに出力します。
+            ファイルのパスはファイル選択のダイアログを表示します。
+            ヘッダはヘッダ出力指定子に基づいて出力します。
+            </summary>
+            <param name="spread"></param>
+            <param name="defaultFileName">ダイアログ画面に表示するファイル名の既定値</param>
+            <param name="includeHeader">ヘッダ出力指定子</param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.Spread.FPSpreadExtensions.ExportToExcel(FarPoint.Win.Spread.FpSpread,System.String,FarPoint.Win.Spread.Model.IncludeHeaders)">
+            <summary>
+            シートのデータをCSVファイルに出力します。
+            </summary>
+            <param name="spread"></param>
+            <param name="filePath"></param>
+            <param name="includeHeader">ヘッダ出力指定子</param>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.Spread.ISheetDataModelExtensions">
+            <summary>
+            ISheetDataModel の拡張メソッドを定義します。
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.Spread.ISheetDataModelExtensions.SetValue(FarPoint.Win.Spread.Model.ISheetDataModel,System.Int32,System.Int32,System.Object,System.Object)">
+            <summary>
+            指定した行と列のセルにデータを設定します。
+            </summary>
+            <param name="datamodel"></param>
+            <param name="row">行</param>
+            <param name="column">列</param>
+            <param name="cellValue">セルの値</param>
+            <param name="tagValue">タグの値</param>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.Spread.ISheetStyleModelExtensions">
+            <summary>
+            ISheetSytleModelの拡張メソッドを定義します。
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.Spread.ISheetStyleModelExtensions.SetStyleInfoValue(FarPoint.Win.Spread.Model.ISheetStyleModel,System.Int32,System.Int32,System.Action{FarPoint.Win.Spread.StyleInfo})">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.Spread.RowExtendedInfo">
+            <summary>
+            行の拡張情報
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.Spread.RowExtendedInfo.#ctor">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.Spread.RowExtendedInfo.ItemIsEdited">
+            <summary>
+            項目が編集されたかどうか。
+            値を一度でも書き換えた場合を編集済みとみなします。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.Spread.RowExtendedInfo.ItemIsDeleted">
+            <summary>
+            項目が削除されたかどうか
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.Spread.RowExtendedInfo.SourceObject">
+            <summary>
+            元オブジェクト
+            </summary>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.Spread.RowExtension">
+            <summary>
+            Rowクラスの拡張メソッドを定義します。
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.Spread.RowExtension.GetExtendedInfo(FarPoint.Win.Spread.Row)">
+            <summary>
+            拡張情報を取得します。
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.Spread.RowExtension.GetItemIsEdited(FarPoint.Win.Spread.Row)">
+            <summary>
+            編集状態を取得します。
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.Spread.RowExtension.ToItemEdited(FarPoint.Win.Spread.Row)">
+            <summary>
+            編集状態にします。
+            </summary>
+            <param name="row"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.Spread.RowExtension.GetItemIsDeleted(FarPoint.Win.Spread.Row)">
+            <summary>
+            削除済みかどうかを取得します。
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.Spread.RowExtension.ToItemDeleted(FarPoint.Win.Spread.Row)">
+            <summary>
+            削除済みにします。
+            </summary>
+            <param name="row"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.Spread.RowExtension.GetSourceObject(FarPoint.Win.Spread.Row)">
+            <summary>
+            元データを取得します。
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.Spread.RowExtension.SetSourceObject(FarPoint.Win.Spread.Row,System.Object)">
+            <summary>
+            元データを設定します。
+            </summary>
+            <param name="row"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.Spread.RowExtension.MarkDeleted(FarPoint.Win.Spread.Row)">
+            <summary>
+            削除済みにマーキングして、削除済みのスタイルに変更します。
+            </summary>
+            <param name="row"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.Spread.RowExtension.SetDeletedStyle(FarPoint.Win.Spread.Row)">
+            <summary>
+            指定した行を、業務データが削除された状態のスタイルに設定します。
+            </summary>
+            <param name="row">設定対象の行</param>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.ViewSupport.Command">
+            <summary>
+            画面のコマンドを表します。
+            </summary>
+        </member>
+        <member name="E:Jpsys.HaishaManageV10.FrameLib.ViewSupport.Command.EnabledChanged">
+            <summary>
+            有効状態が変更されたときのイベントです。
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.ViewSupport.Command.OnEnabledChanged(System.EventArgs)">
+            <summary>
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="E:Jpsys.HaishaManageV10.FrameLib.ViewSupport.Command.Execute">
+            <summary>
+            コマンドが実行されたときのイベントです。
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.ViewSupport.Command.OnExecute(System.EventArgs)">
+            <summary>
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.ViewSupport.Command.PerformExecute">
+            <summary>
+            Executeイベントを発生させます。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.ViewSupport.Command.Enabled">
+            <summary>
+            有効状態を取得します。
+            </summary>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.ViewSupport.CommandBinder">
+            <summary>
+            コマンドとコントロールをバインドします。
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.ViewSupport.CommandBinder._command">
+            <summary>
+            監視対象のEnter,Leaveを監視するオブジェクト
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.ViewSupport.CommandBinder._viewComponent">
+            <summary>
+            検索可能状態を反映するオブジェクト
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.ViewSupport.CommandBinder.#ctor(Jpsys.HaishaManageV10.FrameLib.ViewSupport.Command)">
+            <summary>
+            </summary>
+            <param name="command"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.ViewSupport.CommandBinder.AddViewComponents(System.ComponentModel.Component[])">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.ViewSupport.CommandBinder.AddViewComponent(System.Windows.Forms.Control)">
+            <summary>
+            </summary>
+            <param name="control"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.ViewSupport.CommandBinder.AddViewComponent(System.Windows.Forms.ToolStripStatusLabel)">
+            <summary>
+            </summary>
+            <param name="component"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.ViewSupport.CommandBinder.AddViewComponent(System.Windows.Forms.ToolStripItem)">
+            <summary>
+            </summary>
+            <param name="component"></param>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.ViewSupport.ControlEnteringObserver">
+            <summary>
+            コントロールのEnter, Leaveを監視します。
+            コントロールのEnter, Leaveを検知した場合はイベント経由で通知を行います。
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.ViewSupport.ControlEnteringObserver._edintingCellName">
+            <summary>
+            編集中のセル
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.ViewSupport.ControlEnteringObserver._subjects">
+            <summary>
+            監視対象のリスト
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.ViewSupport.ControlEnteringObserver.#ctor(System.Windows.Forms.Form)">
+            <summary>
+            </summary>
+            <param name="frame"></param>
+        </member>
+        <member name="E:Jpsys.HaishaManageV10.FrameLib.ViewSupport.ControlEnteringObserver.SubjectEnter">
+            <summary>
+            監視対象がEnterしたときのイベントです。
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.ViewSupport.ControlEnteringObserver.OnSubjectEnter(Jpsys.HaishaManageV10.FrameLib.ViewSupport.SubjectEventArgs)">
+            <summary>
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="E:Jpsys.HaishaManageV10.FrameLib.ViewSupport.ControlEnteringObserver.SubjectLeave">
+            <summary>
+            監視対象がLeaveしたときのイベントです。
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.ViewSupport.ControlEnteringObserver.OnSubjectLeave(Jpsys.HaishaManageV10.FrameLib.ViewSupport.SubjectEventArgs)">
+            <summary>
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.ViewSupport.ControlEnteringObserver.Register(System.Windows.Forms.Control)">
+            <summary>
+            監視対象のコントロールを登録します。
+            </summary>
+            <param name="control"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.ViewSupport.ControlEnteringObserver.Register(GrapeCity.Win.MultiRow.GcMultiRow,System.String)">
+            <summary>
+            監視対象の列を登録します。
+            </summary>
+            <param name="multiRow"></param>
+            <param name="cellName"></param>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.ViewSupport.ControlValidatingEventRaiser">
+            <summary>
+            コントロールの値が変更されているときだけValidtingイベントを発生させます。
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.ViewSupport.ControlValidatingEventRaiser.#ctor(System.Windows.Forms.Control,System.Type,System.Func{System.Windows.Forms.Control,System.Object},System.ComponentModel.CancelEventHandler)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.ViewSupport.ControlValidatingEventRaiser.Create``1(``0,System.Func{``0,System.Object},System.ComponentModel.CancelEventHandler)">
+            <summary>
+            コントロールと変更対象の値を取得する関数を指定して、インスタンスを作成します。
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="control"></param>
+            <param name="valueGetter"></param>
+            <param name="eventHandler"></param>
+            <returns></returns>
+        </member>
+        <member name="E:Jpsys.HaishaManageV10.FrameLib.ViewSupport.ControlValidatingEventRaiser.Validating">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.ViewSupport.ControlValidatingEventRaiser.OnValidating(System.Windows.Forms.Control,System.ComponentModel.CancelEventArgs)">
+            <summary>
+            </summary>
+            <param name="control"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.ViewSupport.ControlValidatingEventRaiser._oldValue">
+            <summary>
+            前回値
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.ViewSupport.ControlValidatingEventRaiser._isHandling">
+            <summary>
+            前回値を保持している状態ならtrue
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.ViewSupport.ControlValidatingEventRaiser.PerformWhenEnter">
+            <summary>
+            コントロールのEnterイベント時と同等の処理を実行します。
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.ViewSupport.ControlValidatingEventRaiser.UpdateOldValue">
+            <summary>
+            前回値を保持してる場合、前回値を更新します。
+            Enterイベント後に画面値の初期化処理がされる場合などに呼び出してください。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.ViewSupport.ControlValidatingEventRaiser.Control">
+            <summary>
+            対象のコントロールを取得します。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.ViewSupport.ControlValidatingEventRaiser.OldValue">
+            <summary>
+            編集前の値を取得します。
+            </summary>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.ViewSupport.ControlValidatingEventRaiserCollection">
+            <summary>
+            ControlValidatingEventRaiserオブジェクトのコレクションです。
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.ViewSupport.ControlValidatingEventRaiserCollection.UpdateOldValue">
+            <summary>
+            所有しているControlValidatingEventRaiserオブジェクトの前回値を更新します。
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.ViewSupport.ControlValidatingEventRaiserCollection.PerformWhenEnter(System.Windows.Forms.Control)">
+            <summary>
+            指定したコントロールを含むEventRaiserオブジェクトのPerformWhenEnterメソッドを呼び出します。
+            （Form.Validatingなどで）編集操作以外から検証処理を呼び出した為に、Enterイベントが発生しない場合に呼び出してください。
+            </summary>
+            <param name="control"></param>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.ViewSupport.MultiControlValueChangedHandler">
+            <summary>
+            コントロールの値の変更をハンドルすることをサポートします。
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.ViewSupport.MultiControlValueChangedHandler.TypeEventNames">
+            <summary>
+            ハンドルする対象のイベント
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.ViewSupport.MultiControlValueChangedHandler.AddControls(System.Windows.Forms.Control[])">
+            <summary>
+            対象のコントロールを追加します。
+            </summary>
+            <param name="controls"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.ViewSupport.MultiControlValueChangedHandler.AddControl(System.Windows.Forms.Control)">
+            <summary>
+            検索可能コントロールを追加します。
+            </summary>
+            <param name="ctl"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.ViewSupport.MultiControlValueChangedHandler.OnValueChanged(System.Object,System.EventArgs)">
+            <summary>
+            </summary>
+            <param name="sendar"></param>
+            <param name="args"></param>
+        </member>
+        <member name="E:Jpsys.HaishaManageV10.FrameLib.ViewSupport.MultiControlValueChangedHandler.ValueChanged">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.ViewSupport.SearchStateBinder">
+            <summary>
+            検索対象のEnter,Leaveを監視することによって画面の検索可能状態の変化を検知して、
+            オブジェクトに反映します。
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.ViewSupport.SearchStateBinder._controlEnteringObserver">
+            <summary>
+            建託対象のEnter,Leaveを監視するオブジェクト
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.ViewSupport.SearchStateBinder._statusObjects">
+            <summary>
+            検索可能状態を反映するオブジェクト
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.ViewSupport.SearchStateBinder.#ctor(System.Windows.Forms.Form)">
+            <summary>
+            </summary>
+            <param name="f"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.ViewSupport.SearchStateBinder.AddSearchableControls(System.Windows.Forms.Control[])">
+            <summary>
+            検索可能コントロールを追加します。
+            </summary>
+            <param name="controls"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.ViewSupport.SearchStateBinder.AddSearchableControl(System.Windows.Forms.Control)">
+            <summary>
+            検索可能コントロールを追加します。
+            </summary>
+            <param name="ctl"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.ViewSupport.SearchStateBinder.AddSearchableControl(GrapeCity.Win.MultiRow.GcMultiRow,System.String)">
+            <summary>
+            検索可能コントロールを追加します。
+            </summary>
+            <param name="multiRow"></param>
+            <param name="cellName"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.ViewSupport.SearchStateBinder.AddSearchableControls(GrapeCity.Win.MultiRow.GcMultiRow,System.String[])">
+            <summary>
+            検索可能コントロールを追加します。
+            </summary>
+            <param name="multiRow"></param>
+            <param name="cellNames"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.ViewSupport.SearchStateBinder.AddStateDisplayObject(System.Windows.Forms.Control)">
+            <summary>
+            状態を表示するオブジェクトを追加します。
+            </summary>
+            <param name="control"></param>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.ViewSupport.SearchStateBinder.AddStateObject(System.Windows.Forms.ToolStripStatusLabel)">
+            <summary>
+            状態を表示するオブジェクトを追加します。
+            </summary>
+            <param name="component"></param>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.ViewSupport.SubjectEventArgs">
+            <summary>
+            ControlOvseverの監視対象となるオブジェクトのイベントデータです。
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.ViewSupport.SubjectEventArgs.#ctor(System.String)">
+            <summary>
+            </summary>
+            <param name="sourceDescription"></param>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.ViewSupport.SubjectEventArgs.SourceDescription">
+            <summary>
+            発生源になったコントロールの説明（デバッグ用）
+            </summary>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.ViewSupport.ValidationResult">
+            <summary>
+            検証結果を表します。
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.ViewSupport.ValidationResult.#ctor(Jpsys.HaishaManageV10.FrameLib.ViewSupport.ValidationResultTypeId,System.String)">
+            <summary>
+            </summary>
+            <param name="message"></param>
+            <param name="type"></param>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.ViewSupport.ValidationResult.Type">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.ViewSupport.ValidationResult.Message">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.ViewSupport.ValidationResultTypeId">
+            <summary>
+            検索結果タイプIdを表します。
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.ViewSupport.ValidationResultTypeId.Warning">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:Jpsys.HaishaManageV10.FrameLib.ViewSupport.ValidationResultTypeId.Error">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.ViewSupport.ValidationResultType">
+            <summary>
+            検索結果タイプを表します。
+            </summary>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.ViewSupport.ValidationResultCollection">
+            <summary>
+            ValidationResultオブジェクトのコレクションです。
+            </summary>
+        </member>
+        <member name="P:Jpsys.HaishaManageV10.FrameLib.ViewSupport.ValidationResultCollection.HasError">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.ViewSupport.ValidationResultCollectionExtensions">
+            <summary>
+            ValidationResultCollectionの拡張メソッドです。
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.ViewSupport.ValidationResultCollectionExtensions.ShowMessageBoxIfHasItems(Jpsys.HaishaManageV10.FrameLib.ViewSupport.ValidationResultCollection,System.Windows.Forms.Form)">
+            <summary>
+            </summary>
+            <param name="form"></param>
+            <param name="source"></param>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.WinForms.FormExtensions">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Jpsys.HaishaManageV10.FrameLib.WinForms.FormExtensions.OnCmnSearchComplete(System.Windows.Forms.Form)">
+            <summary>
+            共通検索が完了したときに呼び出します。
+            </summary>
+        </member>
+        <member name="T:Jpsys.HaishaManageV10.FrameLib.FrameProjectUtilites">
+            <summary>
+            画面を定義するクラスまたはその操作を定義するクラスにて共通に使用する、
+            プロジェクト固有の各種静的メソッドを定義します。いわゆるプロジェクト共通画面関数です。
+            </summary>
+        </member>
+    </members>
+</doc>

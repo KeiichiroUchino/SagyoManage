@@ -1,0 +1,1043 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EBF06902-FF30-42C5-A918-4529640551EB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Jpsys.HaishaManageV10.Frame</RootNamespace>
+    <AssemblyName>Jpsys.HaishaManageV10.Frame</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.1\lib\BouncyCastle.Crypto.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="C1.Win.4, Version=4.0.20172.271, Culture=neutral, PublicKeyToken=944ae1ea0e47ca04, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1Schedule.4, Version=4.0.20172.271, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="ClosedXML">
+      <HintPath>..\packages\ClosedXML.0.80.1\lib\net40-client\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportAppServer.ClientDoc, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Controllers, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ReportDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.5\lib\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.CalcEngine, Version=11.0.4504.2012, Culture=neutral, PublicKeyToken=a5fa960294d899e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\SpreadWin8\Bin\v8.0.3502.2008\FarPoint.CalcEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.Excel, Version=11.0.4504.2012, Culture=neutral, PublicKeyToken=a5fa960294d899e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\SpreadWin8\Bin\v8.0.3502.2008\FarPoint.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.PDF, Version=11.0.4504.2012, Culture=neutral, PublicKeyToken=a5fa960294d899e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\SpreadWin8\Bin\v8.0.3502.2008\FarPoint.PDF.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.PluginCalendar.WinForms, Version=11.0.4504.2012, Culture=neutral, PublicKeyToken=a5fa960294d899e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\SpreadWin8\Bin\v8.0.3502.2008\FarPoint.PluginCalendar.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.Win, Version=11.0.4504.2012, Culture=neutral, PublicKeyToken=a5fa960294d899e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\SpreadWin8\Bin\v8.0.3502.2008\FarPoint.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.Win.Chart, Version=11.0.4504.2012, Culture=neutral, PublicKeyToken=a5fa960294d899e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\SpreadWin8\Bin\v8.0.3502.2008\FarPoint.Win.Chart.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.Win.SpreadJ, Version=11.0.4504.2012, Culture=neutral, PublicKeyToken=a5fa960294d899e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\SpreadWin8\Bin\v8.0.3502.2008\FarPoint.Win.SpreadJ.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Spreadsheet, Version=11.0.4504.2012, Culture=neutral, PublicKeyToken=a5fa960294d899e7">
+    </Reference>
+    <Reference Include="GrapeCity.Spreadsheet.Win, Version=11.0.4504.2012, Culture=neutral, PublicKeyToken=a5fa960294d899e7">
+    </Reference>
+    <Reference Include="GrapeCity.CalcEngine, Version=11.0.4504.2012, Culture=neutral, PublicKeyToken=a5fa960294d899e7">
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Chart.v9, Version=9.1.4061.1, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL" />
+    <Reference Include="GrapeCity.ActiveReports.Design.Win.v9, Version=9.1.4061.1, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\ActiveReportsNET9\Bin\v9.1.4061.1\GrapeCity.ActiveReports.Design.Win.v9.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Diagnostics.v9, Version=9.1.4061.1, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\ActiveReportsNET9\Bin\v9.1.4061.1\GrapeCity.ActiveReports.Diagnostics.v9.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Document.v9, Version=9.1.4061.1, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\ActiveReportsNET9\Bin\v9.1.4061.1\GrapeCity.ActiveReports.Document.v9.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Document.v9, Version=9.1.4061.1, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\ActiveReportsNET9\Bin\v9.1.4061.1\GrapeCity.ActiveReports.Export.Document.v9.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Image.v9, Version=9.1.4061.1, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\ActiveReportsNET9\Bin\v9.1.4061.1\GrapeCity.ActiveReports.Export.Image.v9.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Pdf.v9, Version=9.1.4061.1, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\ActiveReportsNET9\Bin\v9.1.4061.1\GrapeCity.ActiveReports.Export.Pdf.v9.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Rdf.v9, Version=9.1.4061.1, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\ActiveReportsNET9\Bin\v9.1.4061.1\GrapeCity.ActiveReports.Export.Rdf.v9.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Extensibility.v9, Version=9.1.4061.1, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\ActiveReportsNET9\Bin\v9.1.4061.1\GrapeCity.ActiveReports.Extensibility.v9.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.v9, Version=9.1.4061.1, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\ActiveReportsNET9\Bin\v9.1.4061.1\GrapeCity.ActiveReports.v9.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Viewer.Win.v9, Version=9.1.4061.1, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\ActiveReportsNET9\Bin\v9.1.4061.1\GrapeCity.ActiveReports.Viewer.Win.v9.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Framework.CalendarGrid.v24, Version=2.4.4002.2012, Culture=neutral, PublicKeyToken=fdd90f5c44b73170, processorArchitecture=MSIL" />
+    <Reference Include="GrapeCity.Framework.InputMan.v24, Version=2.4.4005.2012, Culture=neutral, PublicKeyToken=fdd90f5c44b73170, processorArchitecture=MSIL" />
+    <Reference Include="GrapeCity.Framework.MultiRow.v24, Version=2.4.4005.2012, Culture=neutral, PublicKeyToken=fdd90f5c44b73170, processorArchitecture=MSIL" />
+    <Reference Include="GrapeCity.Framework.PlusPak.v24, Version=2.4.4005.2012, Culture=neutral, PublicKeyToken=fdd90f5c44b73170, processorArchitecture=MSIL" />
+    <Reference Include="GrapeCity.Win.CalendarGrid.v20, Version=2.0.4002.2012, Culture=neutral, PublicKeyToken=f4c1eb1dac5d2351, processorArchitecture=MSIL" />
+    <Reference Include="GrapeCity.Win.Editors.v100, Version=10.0.4005.2012, Culture=neutral, PublicKeyToken=0ce01a33ce55ca12, processorArchitecture=MSIL" />
+    <Reference Include="GrapeCity.Win.Input.Interop.v100, Version=10.0.4005.2012, Culture=neutral, PublicKeyToken=40ae1c5c604f43d6, processorArchitecture=MSIL" />
+    <Reference Include="GrapeCity.Win.MultiRow.v100, Version=10.0.4005.2012, Culture=neutral, PublicKeyToken=0f7a722ee3c2bdd9, processorArchitecture=MSIL" />
+    <Reference Include="GrapeCity.Win.PluginInputMan, Version=11.0.4504.2012, Culture=neutral, PublicKeyToken=a5fa960294d899e7, processorArchitecture=MSIL" />
+    <Reference Include="GrapeCity.Win.PlusPak.Calendar.Design.v100, Version=10.0.4005.2012, Culture=neutral, PublicKeyToken=63a9ba12b6923243, processorArchitecture=MSIL" />
+    <Reference Include="GrapeCity.Win.PlusPak.Calendar.v100, Version=10.0.4005.2012, Culture=neutral, PublicKeyToken=63a9ba12b6923243, processorArchitecture=MSIL" />
+    <Reference Include="GrapeCity.Win.PlusPak.Design.v100, Version=10.0.4005.2012, Culture=neutral, PublicKeyToken=63a9ba12b6923243, processorArchitecture=MSIL" />
+    <Reference Include="GrapeCity.Win.PlusPak.v100, Version=10.0.4005.2012, Culture=neutral, PublicKeyToken=63a9ba12b6923243, processorArchitecture=MSIL" />
+    <Reference Include="jp.co.jpsys.util.db.v14, Version=1.4.2014.225, Culture=neutral, PublicKeyToken=316a34c9b80c0207, processorArchitecture=MSIL" />
+    <Reference Include="jp.co.jpsys.util.io.v14, Version=1.4.2014.225, Culture=neutral, PublicKeyToken=0d0b405944e25b6e, processorArchitecture=MSIL" />
+    <Reference Include="jp.co.jpsys.util.log.v14, Version=1.4.2014.225, Culture=neutral, PublicKeyToken=f18b5f7e6c336fac, processorArchitecture=MSIL" />
+    <Reference Include="jp.co.jpsys.util.print.v14, Version=1.4.2014.225, Culture=neutral, PublicKeyToken=57ea13fd411b0c5b, processorArchitecture=MSIL" />
+    <Reference Include="jp.co.jpsys.util.ui.v14, Version=1.4.2014.225, Culture=neutral, PublicKeyToken=8f2e82159694f18f, processorArchitecture=MSIL" />
+    <Reference Include="jp.co.jpsys.util.v14, Version=1.4.2014.225, Culture=neutral, PublicKeyToken=a576712cd05b4e6c, processorArchitecture=MSIL" />
+    <Reference Include="MailKit, Version=1.12.0.0, Culture=neutral, PublicKeyToken=4e064fe7c44a8f1b, processorArchitecture=MSIL">
+      <HintPath>..\packages\MailKit.1.12.0\lib\net45\MailKit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MimeKit, Version=1.12.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL">
+      <HintPath>..\packages\MimeKit.1.12.0\lib\net45\MimeKit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VBReport8.CellDesigner, Version=8.0.5270.1510, Culture=neutral, PublicKeyToken=5576ecf2941e8c0d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\..\Program Files (x86)\VB-Report8\Bin\VBReport8.CellDesigner.dll</HintPath>
+    </Reference>
+    <Reference Include="VBReport8.CellReport, Version=8.0.5270.1510, Culture=neutral, PublicKeyToken=a562bca15217617c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\..\Program Files (x86)\VB-Report8\Bin\VBReport8.CellReport.dll</HintPath>
+    </Reference>
+    <Reference Include="VBReport8.Document, Version=8.0.5270.1510, Culture=neutral, PublicKeyToken=5fef747f5909e4c9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\..\Program Files (x86)\VB-Report8\Bin\VBReport8.Document.dll</HintPath>
+    </Reference>
+    <Reference Include="VBReport8.Shared, Version=8.0.5270.1510, Culture=neutral, PublicKeyToken=eb874eae9ad54445, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\..\Program Files (x86)\VB-Report8\Bin\VBReport8.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="VBReport8.Viewer, Version=8.0.5270.1510, Culture=neutral, PublicKeyToken=8bb5989c23433875, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\..\Program Files (x86)\VB-Report8\Bin\VBReport8.Viewer.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChangeMasterCodeFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeMasterCodeFrame.designer.cs">
+      <DependentUpon>ChangeMasterCodeFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeMasterCodeTextFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeMasterCodeTextFrame.designer.cs" />
+    <Compile Include="ControlDoubleClickEventRaiser.cs" />
+    <Compile Include="HaishaShosaiNyuryokuFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HaishaShosaiNyuryokuFrame.Designer.cs">
+      <DependentUpon>HaishaShosaiNyuryokuFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JuchuNyuryokuMeisaiTpl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="JuchuNyuryokuMeisaiTpl.Designer.cs">
+      <DependentUpon>JuchuNyuryokuMeisaiTpl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JuchuNyuryokuFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JuchuNyuryokuFrame.Designer.cs">
+      <DependentUpon>JuchuNyuryokuFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemBunruiFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemBunruiFrame.Designer.cs">
+      <DependentUpon>ItemBunruiFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HaishaNyuryokuFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HaishaNyuryokuFrame.Designer.cs">
+      <DependentUpon>HaishaNyuryokuFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\NskDefaultTodayDateTime.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\NskDefaultTodayDateTime.Designer.cs">
+      <DependentUpon>NskDefaultTodayDateTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\NskDateTime.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\NskDateTime.Designer.cs">
+      <DependentUpon>NskDateTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CsvExportFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CsvExportFrame.designer.cs">
+      <DependentUpon>CsvExportFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\NskDateTimeEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\NskDateTimeEx.Designer.cs">
+      <DependentUpon>NskDateTimeEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PasswordChangeFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PasswordChangeFrame.designer.cs">
+      <DependentUpon>PasswordChangeFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CmnSearchOperatorFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CmnSearchOperatorFrame.Designer.cs">
+      <DependentUpon>CmnSearchOperatorFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Command\CommandSet.cs" />
+    <Compile Include="Command\CommandType.cs" />
+    <Compile Include="CommonDALUtil.cs" />
+    <Compile Include="DeleteMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteMessage.designer.cs">
+      <DependentUpon>DeleteMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EventData\ReportDataCreatedEventArgs.cs" />
+    <Compile Include="EventData\UserDoingTaskEventArgs.cs" />
+    <Compile Include="KengenNameTpl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="KengenNameTpl.designer.cs">
+      <DependentUpon>KengenNameTpl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAuthSettingFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuAuthSettingFrame.designer.cs">
+      <DependentUpon>MenuAuthSettingFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAuthSettingTpl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MenuAuthSettingTpl.designer.cs">
+      <DependentUpon>MenuAuthSettingTpl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OperateHistoryViewFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OperateHistoryViewFrame.Designer.cs">
+      <DependentUpon>OperateHistoryViewFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OperatorFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OperatorFrame.Designer.cs">
+      <DependentUpon>OperatorFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemPropertyKengenTpl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SystemPropertyKengenTpl.designer.cs">
+      <DependentUpon>SystemPropertyKengenTpl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemPropertyTaxRateTpl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SystemPropertyTaxRateTpl.designer.cs">
+      <DependentUpon>SystemPropertyTaxRateTpl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemFrame.Designer.cs">
+      <DependentUpon>ItemFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemGroupFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemGroupFrame.Designer.cs">
+      <DependentUpon>ItemGroupFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CarKindFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarKindFrame.Designer.cs">
+      <DependentUpon>CarKindFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TokuisakiFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TokuisakiFrame.Designer.cs">
+      <DependentUpon>TokuisakiFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffFrame.Designer.cs">
+      <DependentUpon>StaffFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShozokuGroupFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShozokuGroupFrame.Designer.cs">
+      <DependentUpon>ShozokuGroupFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CmnSearchShozokuGroupFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CmnSearchShozokuGroupFrame.Designer.cs">
+      <DependentUpon>CmnSearchShozokuGroupFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KanriFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KanriFrame.Designer.cs">
+      <DependentUpon>KanriFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CmnSearchItemFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CmnSearchItemFrame.Designer.cs">
+      <DependentUpon>CmnSearchItemFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CmnSearchTokuisakiFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CmnSearchTokuisakiFrame.Designer.cs">
+      <DependentUpon>CmnSearchTokuisakiFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CmnSearchPointFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CmnSearchPointFrame.Designer.cs">
+      <DependentUpon>CmnSearchPointFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CmnSearchItemGroupFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CmnSearchItemGroupFrame.Designer.cs">
+      <DependentUpon>CmnSearchItemGroupFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CarKindGroupFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarKindGroupFrame.Designer.cs">
+      <DependentUpon>CarKindGroupFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomenFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomenFrame.Designer.cs">
+      <DependentUpon>HomenFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CmnSearchCarKindGroupFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CmnSearchCarKindGroupFrame.Designer.cs">
+      <DependentUpon>CmnSearchCarKindGroupFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CmnSearchHomenFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CmnSearchHomenFrame.Designer.cs">
+      <DependentUpon>CmnSearchHomenFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CmnSearchStaffFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CmnSearchStaffFrame.Designer.cs">
+      <DependentUpon>CmnSearchStaffFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CmnSearchCarFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CmnSearchCarFrame.Designer.cs">
+      <DependentUpon>CmnSearchCarFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CmnSearchTorihikisakiFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CmnSearchTorihikisakiFrame.Designer.cs">
+      <DependentUpon>CmnSearchTorihikisakiFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmphasizeErrorMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmphasizeErrorMessage.designer.cs">
+      <DependentUpon>EmphasizeErrorMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CmnSearchCarKindFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CmnSearchCarKindFrame.Designer.cs">
+      <DependentUpon>CmnSearchCarKindFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CarFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarFrame.Designer.cs">
+      <DependentUpon>CarFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExternalDataLinkProcessViewFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExternalDataLinkProcessViewFrame.Designer.cs">
+      <DependentUpon>ExternalDataLinkProcessViewFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExternalDataLinkProcessListFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExternalDataLinkProcessListFrame.Designer.cs">
+      <DependentUpon>ExternalDataLinkProcessListFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CmnSearchTokuisakiGroupFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CmnSearchTokuisakiGroupFrame.Designer.cs">
+      <DependentUpon>CmnSearchTokuisakiGroupFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TokuisakiGroupFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TokuisakiGroupFrame.Designer.cs">
+      <DependentUpon>TokuisakiGroupFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TokuisakiGroupMeisaiTpl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TokuisakiGroupMeisaiTpl.designer.cs">
+      <DependentUpon>TokuisakiGroupMeisaiTpl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PointBunruiFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PointBunruiFrame.Designer.cs">
+      <DependentUpon>PointBunruiFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JuchuIchiranMeisaiTpl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="JuchuIchiranMeisaiTpl.Designer.cs">
+      <DependentUpon>JuchuIchiranMeisaiTpl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JuchuIchiranFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JuchuIchiranFrame.Designer.cs">
+      <DependentUpon>JuchuIchiranFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PointFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PointFrame.Designer.cs">
+      <DependentUpon>PointFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestSubFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestSubFrame.Designer.cs">
+      <DependentUpon>TestSubFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CmnSearchPointGroupFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CmnSearchPointGroupFrame.Designer.cs">
+      <DependentUpon>CmnSearchPointGroupFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PointGroupFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PointGroupFrame.Designer.cs">
+      <DependentUpon>PointGroupFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HanroFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HanroFrame.Designer.cs">
+      <DependentUpon>HanroFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KenAllCsvImportFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KenAllCsvImportFrame.Designer.cs">
+      <DependentUpon>KenAllCsvImportFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HaishokuFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HaishokuFrame.Designer.cs">
+      <DependentUpon>HaishokuFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KyujitsuCalendarFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KyujitsuCalendarFrame.Designer.cs">
+      <DependentUpon>KyujitsuCalendarFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CmnSearchSystemNameFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CmnSearchSystemNameFrame.Designer.cs">
+      <DependentUpon>CmnSearchSystemNameFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CmnSearchHanroFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CmnSearchHanroFrame.Designer.cs">
+      <DependentUpon>CmnSearchHanroFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CmnSearchClmClassFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CmnSearchClmClassFrame.Designer.cs">
+      <DependentUpon>CmnSearchClmClassFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CmnSearchBranchOfficeFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CmnSearchBranchOfficeFrame.Designer.cs">
+      <DependentUpon>CmnSearchBranchOfficeFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CmnSearchOwnerFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CmnSearchOwnerFrame.Designer.cs">
+      <DependentUpon>CmnSearchOwnerFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CmnSearchContractFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CmnSearchContractFrame.Designer.cs">
+      <DependentUpon>CmnSearchContractFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CmnSearchFigFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CmnSearchFigFrame.Designer.cs">
+      <DependentUpon>CmnSearchFigFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CmnSearchMemoFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CmnSearchMemoFrame.Designer.cs">
+      <DependentUpon>CmnSearchMemoFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomenGroupMeisaiTpl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HomenGroupMeisaiTpl.designer.cs">
+      <DependentUpon>HomenGroupMeisaiTpl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomenGroupFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomenGroupFrame.Designer.cs">
+      <DependentUpon>HomenGroupFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CmnSearchHomenGroupFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CmnSearchHomenGroupFrame.Designer.cs">
+      <DependentUpon>CmnSearchHomenGroupFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CarKindGroupMeisaiTpl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CarKindGroupMeisaiTpl.designer.cs">
+      <DependentUpon>CarKindGroupMeisaiTpl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HaishaIchiranFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HaishaIchiranFrame.Designer.cs">
+      <DependentUpon>HaishaIchiranFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HaishaNyuryokuConditionFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HaishaNyuryokuConditionFrame.Designer.cs">
+      <DependentUpon>HaishaNyuryokuConditionFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShohinUkebaraiHyoPrtToFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShohinUkebaraiHyoPrtToFrame.Designer.cs">
+      <DependentUpon>ShohinUkebaraiHyoPrtToFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HaishaShijiShoPrtToFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HaishaShijiShoPrtToFrame.Designer.cs">
+      <DependentUpon>HaishaShijiShoPrtToFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HaisoShijiShoPrtToFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HaisoShijiShoPrtToFrame.Designer.cs">
+      <DependentUpon>HaisoShijiShoPrtToFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoshaIraishoPrtToFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoshaIraishoPrtToFrame.Designer.cs">
+      <DependentUpon>YoshaIraishoPrtToFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HaisoShijiMailSendToListFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HaisoShijiMailSendToListFrame.Designer.cs">
+      <DependentUpon>HaisoShijiMailSendToListFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HaisoShijiMailSendFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HaisoShijiMailSendFrame.Designer.cs">
+      <DependentUpon>HaisoShijiMailSendFrame.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BizProperty\BizProperty.csproj">
+      <Project>{da910a09-c56a-4656-a6ff-a249c290ec45}</Project>
+      <Name>BizProperty</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ComLib\ComLib.csproj">
+      <Project>{0c49e98b-2858-4fc4-88b3-99a29247827f}</Project>
+      <Name>ComLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FrameLib\FrameLib.csproj">
+      <Project>{6fb84b34-0ed3-44f2-ab39-5a6dc882afc7}</Project>
+      <Name>FrameLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{ba8d0cf2-49f3-4173-9a2b-1c0b556e0a79}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Property\Property.csproj">
+      <Project>{e7107c36-4672-483b-b0cd-a6c9ad82b22d}</Project>
+      <Name>Property</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReportDAL\ReportDAL.csproj">
+      <Project>{7ed57ef7-3566-4737-bd52-10ee7c662950}</Project>
+      <Name>ReportDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReportFrame\ReportFrame.csproj">
+      <Project>{2ee5e299-800f-4451-956c-081b443eca5c}</Project>
+      <Name>ReportFrame</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReportModel\ReportModel.csproj">
+      <Project>{e0f7f5dc-164f-4fd9-8895-8c6b3f097f23}</Project>
+      <Name>ReportModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SQLServerDAL\SQLServerDAL.csproj">
+      <Project>{3909caaf-402b-4904-9fe3-5914f718440f}</Project>
+      <Name>SQLServerDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VBReport\VBReport.csproj">
+      <Project>{13fceeed-b271-44ca-9ca5-b65bf7a4907c}</Project>
+      <Name>VBReport</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ChangeMasterCodeFrame.resx">
+      <DependentUpon>ChangeMasterCodeFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeMasterCodeTextFrame.resx" />
+    <EmbeddedResource Include="HaishaShosaiNyuryokuFrame.resx">
+      <DependentUpon>HaishaShosaiNyuryokuFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JuchuIchiranMeisaiTpl.resx">
+      <DependentUpon>JuchuIchiranMeisaiTpl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JuchuNyuryokuFrame.resx">
+      <DependentUpon>JuchuNyuryokuFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemBunruiFrame.resx">
+      <DependentUpon>ItemBunruiFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CsvExportFrame.resx">
+      <DependentUpon>CsvExportFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JuchuNyuryokuMeisaiTpl.resx">
+      <DependentUpon>JuchuNyuryokuMeisaiTpl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PasswordChangeFrame.resx">
+      <DependentUpon>PasswordChangeFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CmnSearchOperatorFrame.resx">
+      <DependentUpon>CmnSearchOperatorFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteMessage.resx">
+      <DependentUpon>DeleteMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KengenNameTpl.resx">
+      <DependentUpon>KengenNameTpl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuAuthSettingFrame.resx">
+      <DependentUpon>MenuAuthSettingFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuAuthSettingTpl.resx">
+      <DependentUpon>MenuAuthSettingTpl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OperateHistoryViewFrame.resx">
+      <DependentUpon>OperateHistoryViewFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OperatorFrame.resx">
+      <DependentUpon>OperatorFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemPropertyKengenTpl.resx">
+      <DependentUpon>SystemPropertyKengenTpl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemPropertyTaxRateTpl.resx">
+      <DependentUpon>SystemPropertyTaxRateTpl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemFrame.resx">
+      <DependentUpon>ItemFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemGroupFrame.resx">
+      <DependentUpon>ItemGroupFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarKindFrame.resx">
+      <DependentUpon>CarKindFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TokuisakiFrame.resx">
+      <DependentUpon>TokuisakiFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffFrame.resx">
+      <DependentUpon>StaffFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShozokuGroupFrame.resx">
+      <DependentUpon>ShozokuGroupFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CmnSearchShozokuGroupFrame.resx">
+      <DependentUpon>CmnSearchShozokuGroupFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KanriFrame.resx">
+      <DependentUpon>KanriFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CmnSearchItemFrame.resx">
+      <DependentUpon>CmnSearchItemFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CmnSearchTokuisakiFrame.resx">
+      <DependentUpon>CmnSearchTokuisakiFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CmnSearchPointFrame.resx">
+      <DependentUpon>CmnSearchPointFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CmnSearchItemGroupFrame.resx">
+      <DependentUpon>CmnSearchItemGroupFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarKindGroupFrame.resx">
+      <DependentUpon>CarKindGroupFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomenFrame.resx">
+      <DependentUpon>HomenFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CmnSearchCarKindGroupFrame.resx">
+      <DependentUpon>CmnSearchCarKindGroupFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CmnSearchHomenFrame.resx">
+      <DependentUpon>CmnSearchHomenFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CmnSearchStaffFrame.resx">
+      <DependentUpon>CmnSearchStaffFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CmnSearchCarFrame.resx">
+      <DependentUpon>CmnSearchCarFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CmnSearchTorihikisakiFrame.resx">
+      <DependentUpon>CmnSearchTorihikisakiFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmphasizeErrorMessage.resx">
+      <DependentUpon>EmphasizeErrorMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CmnSearchCarKindFrame.resx">
+      <DependentUpon>CmnSearchCarKindFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarFrame.resx">
+      <DependentUpon>CarFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExternalDataLinkProcessViewFrame.resx">
+      <DependentUpon>ExternalDataLinkProcessViewFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExternalDataLinkProcessListFrame.resx">
+      <DependentUpon>ExternalDataLinkProcessListFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CmnSearchTokuisakiGroupFrame.resx">
+      <DependentUpon>CmnSearchTokuisakiGroupFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TokuisakiGroupFrame.resx">
+      <DependentUpon>TokuisakiGroupFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TokuisakiGroupMeisaiTpl.resx">
+      <DependentUpon>TokuisakiGroupMeisaiTpl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PointBunruiFrame.resx">
+      <DependentUpon>PointBunruiFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JuchuIchiranFrame.resx">
+      <DependentUpon>JuchuIchiranFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PointFrame.resx">
+      <DependentUpon>PointFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestSubFrame.resx">
+      <DependentUpon>TestSubFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HaishaNyuryokuFrame.resx">
+      <DependentUpon>HaishaNyuryokuFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CmnSearchPointGroupFrame.resx">
+      <DependentUpon>CmnSearchPointGroupFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PointGroupFrame.resx">
+      <DependentUpon>PointGroupFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HanroFrame.resx">
+      <DependentUpon>HanroFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KenAllCsvImportFrame.resx">
+      <DependentUpon>KenAllCsvImportFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HaishokuFrame.resx">
+      <DependentUpon>HaishokuFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KyujitsuCalendarFrame.resx">
+      <DependentUpon>KyujitsuCalendarFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CmnSearchSystemNameFrame.resx">
+      <DependentUpon>CmnSearchSystemNameFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CmnSearchHanroFrame.resx">
+      <DependentUpon>CmnSearchHanroFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CmnSearchClmClassFrame.resx">
+      <DependentUpon>CmnSearchClmClassFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CmnSearchBranchOfficeFrame.resx">
+      <DependentUpon>CmnSearchBranchOfficeFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CmnSearchOwnerFrame.resx">
+      <DependentUpon>CmnSearchOwnerFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CmnSearchContractFrame.resx">
+      <DependentUpon>CmnSearchContractFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CmnSearchFigFrame.resx">
+      <DependentUpon>CmnSearchFigFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CmnSearchMemoFrame.resx">
+      <DependentUpon>CmnSearchMemoFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomenGroupMeisaiTpl.resx">
+      <DependentUpon>HomenGroupMeisaiTpl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomenGroupFrame.resx">
+      <DependentUpon>HomenGroupFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CmnSearchHomenGroupFrame.resx">
+      <DependentUpon>CmnSearchHomenGroupFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarKindGroupMeisaiTpl.resx">
+      <DependentUpon>CarKindGroupMeisaiTpl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HaishaIchiranFrame.resx">
+      <DependentUpon>HaishaIchiranFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HaishaNyuryokuConditionFrame.resx">
+      <DependentUpon>HaishaNyuryokuConditionFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShohinUkebaraiHyoPrtToFrame.resx">
+      <DependentUpon>ShohinUkebaraiHyoPrtToFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HaishaShijiShoPrtToFrame.resx">
+      <DependentUpon>HaishaShijiShoPrtToFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HaisoShijiShoPrtToFrame.resx">
+      <DependentUpon>HaisoShijiShoPrtToFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YoshaIraishoPrtToFrame.resx">
+      <DependentUpon>YoshaIraishoPrtToFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HaisoShijiMailSendToListFrame.resx">
+      <DependentUpon>HaisoShijiMailSendToListFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HaisoShijiMailSendFrame.resx">
+      <DependentUpon>HaisoShijiMailSendFrame.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Contents\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ADODB">
+      <Guid>{2A75196C-D9EB-4129-B803-931327F72D5C}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxMFREMOTELib">
+      <Guid>{C7CAE6A7-8556-11D1-AE89-0800460162BA}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="JRO">
+      <Guid>{AC3B8B4C-B6CA-11D1-9F31-00C04FC29D52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>6</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="MFREMOTELib">
+      <Guid>{C7CAE6A7-8556-11D1-AE89-0800460162BA}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="QuartzTypeLib">
+      <Guid>{56A868B0-0AD4-11CE-B03A-0020AF0BA770}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

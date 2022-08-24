@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3909CAAF-402B-4904-9FE3-5914F718440F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Jpsys.SagyoManage.SQLServerDAL</RootNamespace>
+    <AssemblyName>Jpsys.SagyoManage.SQLServerDAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="jp.co.jpsys.util.db.v14, Version=1.4.2014.225, Culture=neutral, PublicKeyToken=316a34c9b80c0207, processorArchitecture=MSIL" />
+    <Reference Include="jp.co.jpsys.util.v14, Version=1.4.2014.225, Culture=neutral, PublicKeyToken=a576712cd05b4e6c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CsvExport\CsvExportDALBase.cs" />
+    <Compile Include="DefaultSettings.cs" />
+    <Compile Include="HaisoShijiMailSend.cs" />
+    <Compile Include="SagyoAnken.cs" />
+    <Compile Include="Keiyaku.cs" />
+    <Compile Include="Meisho.cs" />
+    <Compile Include="IdIterator.cs" />
+    <Compile Include="IdVersionPair.cs" />
+    <Compile Include="CarWariate.cs" />
+    <Compile Include="SagyoShoBunrui.cs" />
+    <Compile Include="SagyoChuBunrui.cs" />
+    <Compile Include="SagyoDaiBunrui.cs" />
+    <Compile Include="SagyoBasho.cs" />
+    <Compile Include="SagyoinWariate.cs" />
+    <Compile Include="SystemSettings.cs" />
+    <Compile Include="MenuItem.cs" />
+    <Compile Include="OperateHistory.cs" />
+    <Compile Include="Operator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SQLHelper.cs" />
+    <Compile Include="SystemName.cs" />
+    <Compile Include="VersionCheckHelper.cs" />
+    <Compile Include="SystemProperty.cs" />
+    <Compile Include="Tokuisaki.cs" />
+    <Compile Include="Staff.cs" />
+    <Compile Include="Car.cs" />
+    <Compile Include="AitesakiItemMeisai.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BizProperty\BizProperty.csproj">
+      <Project>{da910a09-c56a-4656-a6ff-a249c290ec45}</Project>
+      <Name>BizProperty</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ComLib\ComLib.csproj">
+      <Project>{0c49e98b-2858-4fc4-88b3-99a29247827f}</Project>
+      <Name>ComLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{ba8d0cf2-49f3-4173-9a2b-1c0b556e0a79}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

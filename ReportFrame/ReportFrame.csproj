@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2EE5E299-800F-4451-956C-081B443ECA5C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Jpsys.SagyoManage.ReportFrame</RootNamespace>
+    <AssemblyName>Jpsys.SagyoManage.ReportFrame</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportAppServer.ClientDoc, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Controllers, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ReportDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="jp.co.jpsys.util.print.v14, Version=1.4.2014.225, Culture=neutral, PublicKeyToken=57ea13fd411b0c5b, processorArchitecture=MSIL" />
+    <Reference Include="jp.co.jpsys.util.v14, Version=1.4.2014.225, Culture=neutral, PublicKeyToken=a576712cd05b4e6c, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SagyoKeiyakuSaiListToRpt.cs">
+      <DependentUpon>SagyoKeiyakuSaiListToRpt.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="GekkanSagyoKeikakuhyouToRpt.cs">
+      <DependentUpon>GekkanSagyoKeikakuhyouToRpt.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="HibetsuSagyoKeikakuhyouToRpt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HibetsuSagyoKeikakuhyouToRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ModelProxy\GekkanSagyoKeikakuhyouRptProxyInfo.cs" />
+    <Compile Include="ModelProxy\HibetsuSagyoKeikakuhyouRptProxyInfo.cs" />
+    <Compile Include="PrintSettingsHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreviewFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreviewFrame.designer.cs">
+      <DependentUpon>ReportPreviewFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPrintingControl.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BizProperty\BizProperty.csproj">
+      <Project>{da910a09-c56a-4656-a6ff-a249c290ec45}</Project>
+      <Name>BizProperty</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FrameLib\FrameLib.csproj">
+      <Project>{6fb84b34-0ed3-44f2-ab39-5a6dc882afc7}</Project>
+      <Name>FrameLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{ba8d0cf2-49f3-4173-9a2b-1c0b556e0a79}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Property\Property.csproj">
+      <Project>{e7107c36-4672-483b-b0cd-a6c9ad82b22d}</Project>
+      <Name>Property</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReportAppendix\ReportAppendix.csproj">
+      <Project>{a4d85338-f74d-4c2a-b191-176c850db6c0}</Project>
+      <Name>ReportAppendix</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReportModel\ReportModel.csproj">
+      <Project>{e0f7f5dc-164f-4fd9-8895-8c6b3f097f23}</Project>
+      <Name>ReportModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\DataContainer_MoveFirstHS.bmp" />
+    <Content Include="Resources\DataContainer_MoveLastHS.bmp" />
+    <Content Include="Resources\DataContainer_MoveNextHS.bmp" />
+    <Content Include="Resources\DataContainer_MovePreviousHS.bmp" />
+    <Content Include="Resources\printer.ico" />
+    <Content Include="Resources\PrintHS.bmp" />
+    <Content Include="Resources\saveHS.bmp" />
+    <Content Include="Resources\ZoomHS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\Jpsys.SagyoManage.ReportModel.HaisoShijishoConditionCarKindInfo.datasource" />
+    <None Include="Properties\DataSources\Jpsys.SagyoManage.ReportModel.HaisoShijishoConditionStaffInfo.datasource" />
+    <None Include="Properties\DataSources\Jpsys.SagyoManage.ReportModel.HaisoShijishoDetailsInfo.datasource" />
+    <None Include="Properties\DataSources\Jpsys.SagyoManage.ReportModel.HaisoShijiShoRptInfo.datasource" />
+    <None Include="Properties\DataSources\Jpsys.SagyoManage.ReportModel.HaisoShijiShoRptSearchParameter.datasource" />
+    <None Include="Properties\DataSources\Jpsys.SagyoManage.ReportModel.HibetsuSagyoKeikakuhyouRptInfo.datasource" />
+    <None Include="Properties\DataSources\Jpsys.SagyoManage.ReportModel.HibetsuSagyoKeikakuhyouRptInfoSearchParameter.datasource" />
+    <None Include="Properties\DataSources\Jpsys.SagyoManage.ReportModel.JuchuHaishaIchiranHyoRptInfo.datasource" />
+    <None Include="Properties\DataSources\Jpsys.SagyoManage.ReportModel.JuchuHaishaIchiranHyoSearchParameter.datasource" />
+    <None Include="Properties\DataSources\Jpsys.SagyoManage.ReportModel.JuchuHaishaIchiranHyoSumInfo.datasource" />
+    <None Include="Properties\DataSources\Jpsys.SagyoManage.ReportModel.YoshaIraishoConditionCarInfo.datasource" />
+    <None Include="Properties\DataSources\Jpsys.SagyoManage.ReportModel.YoshaIraishoConditionTokuisakiInfo.datasource" />
+    <None Include="Properties\DataSources\Jpsys.SagyoManage.ReportModel.YoshaIraishoDetailsInfo.datasource" />
+    <None Include="Properties\DataSources\Jpsys.SagyoManage.ReportModel.YoshaIraishoPrtInfo.datasource" />
+    <None Include="Properties\DataSources\Jpsys.SagyoManage.ReportModel.YoshaIraishoPrtSearchParameter.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SagyoKeiyakuSaiListToRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SagyoKeiyakuSaiListToRpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GekkanSagyoKeikakuhyouToRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>GekkanSagyoKeikakuhyouToRpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HibetsuSagyoKeikakuhyouToRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>HibetsuSagyoKeikakuhyouToRpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreviewFrame.resx">
+      <DependentUpon>ReportPreviewFrame.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

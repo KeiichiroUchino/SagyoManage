@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6274DEB3-4623-408A-9F13-5B98F89CFA23}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Jpsys.SagyoManage.Boot</RootNamespace>
+    <AssemblyName>Jpsys.SagyoManage.Boot</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\AppIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GrapeCity.Framework.InputMan.v24, Version=2.4.4005.2012, Culture=neutral, PublicKeyToken=fdd90f5c44b73170, processorArchitecture=MSIL" />
+    <Reference Include="GrapeCity.Win.Editors.v100, Version=10.0.4005.2012, Culture=neutral, PublicKeyToken=0ce01a33ce55ca12, processorArchitecture=MSIL" />
+    <Reference Include="jp.co.jpsys.util.log.v14, Version=1.4.2014.225, Culture=neutral, PublicKeyToken=f18b5f7e6c336fac, processorArchitecture=MSIL" />
+    <Reference Include="jp.co.jpsys.util.v14, Version=1.4.2014.225, Culture=neutral, PublicKeyToken=a576712cd05b4e6c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BootInitializer.cs" />
+    <Compile Include="ErrorMessageUtil.cs" />
+    <Compile Include="ErrorMessgeFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ErrorMessgeFrame.designer.cs">
+      <DependentUpon>ErrorMessgeFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoadingFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadingFrame.designer.cs">
+      <DependentUpon>LoadingFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginFrame.designer.cs">
+      <DependentUpon>LoginFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogWriter.cs" />
+    <Compile Include="MdiBaseMenuFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MdiBaseMenuFrame.designer.cs">
+      <DependentUpon>MdiBaseMenuFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuFrame.designer.cs">
+      <DependentUpon>MenuFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ErrorMessgeFrame.resx">
+      <DependentUpon>ErrorMessgeFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadingFrame.resx">
+      <DependentUpon>LoadingFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginFrame.resx">
+      <DependentUpon>LoginFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MdiBaseMenuFrame.resx">
+      <DependentUpon>MdiBaseMenuFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuFrame.resx">
+      <DependentUpon>MenuFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BizProperty\BizProperty.csproj">
+      <Project>{da910a09-c56a-4656-a6ff-a249c290ec45}</Project>
+      <Name>BizProperty</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FrameLib\FrameLib.csproj">
+      <Project>{6fb84b34-0ed3-44f2-ab39-5a6dc882afc7}</Project>
+      <Name>FrameLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Frame\Frame.csproj">
+      <Project>{ebf06902-ff30-42c5-a918-4529640551eb}</Project>
+      <Name>Frame</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{ba8d0cf2-49f3-4173-9a2b-1c0b556e0a79}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Property\Property.csproj">
+      <Project>{e7107c36-4672-483b-b0cd-a6c9ad82b22d}</Project>
+      <Name>Property</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SQLServerDAL\SQLServerDAL.csproj">
+      <Project>{3909caaf-402b-4904-9fe3-5914f718440f}</Project>
+      <Name>SQLServerDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\AppIcon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

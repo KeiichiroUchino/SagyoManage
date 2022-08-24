@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BA8D0CF2-49F3-4173-9A2B-1C0B556E0A79}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Jpsys.SagyoManage.Model</RootNamespace>
+    <AssemblyName>Jpsys.SagyoManage.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="jp.co.jpsys.util.db.v14, Version=1.4.2014.225, Culture=neutral, PublicKeyToken=316a34c9b80c0207, processorArchitecture=MSIL" />
+    <Reference Include="jp.co.jpsys.util.v14, Version=1.4.2014.225, Culture=neutral, PublicKeyToken=a576712cd05b4e6c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractModelBase.cs" />
+    <Compile Include="AbstractSequenceKeyModelBase.cs" />
+    <Compile Include="AbstractSequenceKeyTimeStampModelBase.cs" />
+    <Compile Include="AbstractTimeStampModelBase.cs" />
+    <Compile Include="AnalyseConfig.cs" />
+    <Compile Include="AppAuthInfo.cs" />
+    <Compile Include="DALExceptions\ApplicationFailureException.cs" />
+    <Compile Include="DALExceptions\CanRetryException.cs" />
+    <Compile Include="DALExceptions\ClmFixedException.cs" />
+    <Compile Include="DALExceptions\DetailDataUnmatchingException.cs" />
+    <Compile Include="DALExceptions\MustCloseFormException.cs" />
+    <Compile Include="DALExceptions\NoBusinessDataException.cs" />
+    <Compile Include="DALExceptions\OptimisticConcurrencyException.cs" />
+    <Compile Include="DALExceptions\RowVersionUnmatchingException.cs" />
+    <Compile Include="DALExceptions\SettleByMonthClosedException.cs" />
+    <Compile Include="DALExceptions\UniqueConstraintException.cs" />
+    <Compile Include="ExclusiveControlInfo.cs" />
+    <Compile Include="HanroInfo.cs" />
+    <Compile Include="IModelBase.cs" />
+    <Compile Include="SagyoAnkenInfo.cs" />
+    <Compile Include="KeiyakuInfo.cs" />
+    <Compile Include="MeishoInfo.cs" />
+    <Compile Include="MeishoKbnInfo.cs" />
+    <Compile Include="DefaultSettingsInfo.cs" />
+    <Compile Include="MenuItemInfo.cs" />
+    <Compile Include="CarWariateInfo.cs" />
+    <Compile Include="SagyoShoBunruiInfo.cs" />
+    <Compile Include="SagyoChuBunruiInfo.cs" />
+    <Compile Include="SagyoDaiBunruiInfo.cs" />
+    <Compile Include="SagyoBashoInfo.cs" />
+    <Compile Include="SagyoinWariateInfo.cs" />
+    <Compile Include="SystemSettingsInfo.cs" />
+    <Compile Include="ModelClassAttribute.cs" />
+    <Compile Include="OperateHistoryInfo.cs" />
+    <Compile Include="OperatorInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SystemNameInfo.cs" />
+    <Compile Include="SystemPropertyInfo.cs" />
+    <Compile Include="TokuisakiInfo.cs" />
+    <Compile Include="StaffInfo.cs" />
+    <Compile Include="CarInfo.cs" />
+    <Compile Include="AitesakiItemMeisaiInfo.cs" />
+    <Compile Include="ToraDONBranchOfficeInfo.cs" />
+    <Compile Include="ToraDONClmClassInfo.cs" />
+    <Compile Include="ToraDONContractInfo.cs" />
+    <Compile Include="ToraDONFigInfo.cs" />
+    <Compile Include="ToraDONMemoInfo.cs" />
+    <Compile Include="ToraDONOwnerInfo.cs" />
+    <Compile Include="ToraDonSystemPropertyInfo.cs" />
+    <Compile Include="UriageInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BizProperty\BizProperty.csproj">
+      <Project>{da910a09-c56a-4656-a6ff-a249c290ec45}</Project>
+      <Name>BizProperty</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ComLib\ComLib.csproj">
+      <Project>{0c49e98b-2858-4fc4-88b3-99a29247827f}</Project>
+      <Name>ComLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
