@@ -7,7 +7,6 @@ GrapeCity.Win.CalendarGrid.GcCalendarGrid, GrapeCity.Win.CalendarGrid.v20, Versi
 GrapeCity.Win.Editors.GcNumberValidator, GrapeCity.Win.Editors.v100, Version=10.0.4005.2012, Culture=neutral, PublicKeyToken=0ce01a33ce55ca12
 GrapeCity.Win.Editors.GcTextBox, GrapeCity.Win.Editors.v100, Version=10.0.4005.2012, Culture=neutral, PublicKeyToken=0ce01a33ce55ca12
 GrapeCity.Win.Editors.GcDate, GrapeCity.Win.Editors.v100, Version=10.0.4005.2012, Culture=neutral, PublicKeyToken=0ce01a33ce55ca12
-C1.Win.C1Schedule.C1Calendar, C1.Win.C1Schedule.4, Version=4.0.20173.286, Culture=neutral, PublicKeyToken=79882d576c6336da
 FarPoint.Win.Spread.FormulaTextBox, FarPoint.Win.SpreadJ, Version=11.0.4504.2012, Culture=neutral, PublicKeyToken=a5fa960294d899e7
 GrapeCity.Win.Editors.GcRichTextBox, GrapeCity.Win.Editors.v100, Version=10.0.4005.2012, Culture=neutral, PublicKeyToken=0ce01a33ce55ca12
 GrapeCity.Win.Editors.GcComboBox, GrapeCity.Win.Editors.v100, Version=10.0.4005.2012, Culture=neutral, PublicKeyToken=0ce01a33ce55ca12
